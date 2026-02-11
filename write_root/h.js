@@ -61,9 +61,14 @@ function res(data) {
 }
 
 function fin() {
-    let d = document.getElementById("res")
-    let buf = d.textContent.substring(0, d.textContent.length - 3)
-    let blob = new Blob([buf], { type: "text/plain" })
+    let d = ""
+    pr.forEach(el => {
+        if (el != 1) {
+            d += `${gen_data[el]["幻獣Name"]} ( ${gen_data[el]["変化Name"]} ) -> `
+        }
+    })
+    d = d.substring(0, d.length - 4)
+    let blob = new Blob([d], { type: "text/plain" })
     let link = document.createElement("a")
     link.href = window.URL.createObjectURL(blob)
     link.download = "幻獣変化ルート"
