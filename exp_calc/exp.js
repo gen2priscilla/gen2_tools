@@ -142,5 +142,7 @@ function set_color(html_element) {
             html_element.style.color = "black"
             html_element.style.backgroundColor = "lightgrey"
             break;
+        default:
+            break;
     }
 }
