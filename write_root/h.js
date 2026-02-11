@@ -73,6 +73,7 @@ function fin() {
     link.href = window.URL.createObjectURL(blob)
     link.download = "幻獣変化ルート"
     link.click()
+    URL.revokeObjectURL(link)
 }
 function prev() {
     pr.pop()
