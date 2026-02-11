@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gen-tools-exp</title>
+</head>
+
+<body>
+    <div style="text-align: center;">幻獣物語2 経験値計算機</div>
+    <br>
+    <table border="" id="ee">
+        <tr>
+            <td>現在レベル</td>
+            <td>
+                <div>
+                    <button value="-5" class="add_level_now">-5</button>
+                    <button value="-1" class="add_level_now">-1</button>
+                    <input type="number" id="now_level" style="width: 80px;">
+                    <button value="1" class="add_level_now">+1</button>
+                    <button value="5" class="add_level_now">+5</button>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>目標レベル</td>
+            <td>
+                <div>
+                    <button value="-5" class="add_level_target">-5</button>
+                    <button value="-1" class="add_level_target">-1</button>
+                    <input type="number" id="target_level" style="width: 80px;">
+                    <button value="1" class="add_level_target">+1</button>
+                    <button value="5" class="add_level_target">+5</button>
+                </div>
+            </td>
+        </tr>
+        <tr>
+
+            <td colspan="2">
+                <ul id="ddd">
+                    <li><button value="50" class="set_level">50</button></li>
+                    <li><button value="100" class="set_level">100</button></li>
+                    <li><button value="150" class="set_level">150</button></li>
+                    <li><button value="200" class="set_level">200</button></li>
+                    <li><button value="250" class="set_level">250</button></li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>next exp</td>
+            <td>
+                <div>
+
+                    <input type="number" name="next_exp" id="next_exp" style="width: 80px;">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>転生回数</td>
+            <td>
+                <div>
+
+                    <select id="trans_num" style="width: 80px;" onchange="c()">
+                        <option value="9" id="tr9">9転</option>
+                        <option value="8" id="tr8">8転</option>
+                        <option value="7" id="tr7">7転</option>
+                        <option value="6" id="tr6">6転</option>
+                        <option value="5" id="tr5">5転</option>
+                        <option value="4" id="tr4">4転</option>
+                        <option value="3" id="tr3">3転</option>
+                        <option value="2" id="tr2">2転</option>
+                        <option value="1" id="tr1">1転</option>
+                        <option value="0" id="tr0">0転</option>
+                    </select>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="tb_ab" id="aaaa">
+                <ul>
+                    <li>
+                        <input type="radio" name="a1" id="a1_10%">
+                        <label for="a1_10%">習熟/記念</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="a1" id="a1_20%">
+                        <label for="a1_20%">博識</labe>
+                    </li>
+                    <li>
+                        <input type="radio" name="a1" id="a1_30%">
+                        <label for="a1_30%">早熟</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="a1" id="a1_40%">
+                        <label for="a1_40%">共栄</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="a1" id="a1_0%">
+                        <label for="a1_0%">なし</label>
+                    </li>
+                </ul>
+            </td>
+
+        </tr>
+        <tr>
+            <td colspan="2" class="tb_ab">
+                <ul>
+                    <li>
+                        <input type="radio" name="a2" id="10%">
+                        <label for="10%">習熟/記念</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="a2" id="20%">
+                        <label for="20%">博識</labe>
+                    </li>
+                    <li>
+                        <input type="radio" name="a2" id="30%">
+                        <label for="30%">早熟</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="a2" id="40%">
+                        <label for="40%">共栄</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="a2" id="0%">
+                        <label for="0%">なし</label>
+                    </li>
+                </ul>
+            </td>
+
+        </tr>
+
+    </table>
+
+    <br>
+    <div style="text-align: center;">
+        <button onclick="ff()">計算する</button>
+    </div>
+    <div id="res" style="text-align: center;"></div>
+
+    <script src="exp.js">
+
+    </script>
+    <style>
+        ul {
+            list-style: none;
+            display: flex;
+            padding-left: 0;
+            justify-content: center;
+        }
+
+
+        #ee {
+            margin: auto;
+        }
+
+        .set_level {
+            width: 40px;
+            margin: 5px;
+        }
+
+        .tb_ab {
+            text-align: center;
+        }
+    </style>
+</body>
+
+</html>
