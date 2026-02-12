@@ -1,6 +1,7 @@
 function ff() {
 
     let res = document.getElementById("res")
+    let res_2 = document.getElementById("res_2")
 
     let now_level = parseInt(document.getElementById("now_level").value)
     let target_level = parseInt(document.getElementById("target_level").value)
@@ -11,18 +12,25 @@ function ff() {
     if (trans_num == 8 || trans_num == 9) {
         max_level = 250
     }
+    if (isNaN(next_exp)) {
+        next_exp = 0
+    }
     // console.log(target_level)
     if (next_exp > (now_level * (trans_num + 11) - 3)) {
         res.textContent = "next 経験値 が大きすぎるかも?"
     } else if (now_level >= target_level) {
         res.textContent = "現在レベルが目標レベル以上です"
-    } else if (0 < now_level && now_level < max_level && 0 < target_level && target_level <= max_level) {
-        res.textContent = calc_level(now_level, target_level, next_exp, trans_num)
+    } else if (0 < now_level && now_level < max_level && 0 < target_level && target_level <= max_level && 0 <= next_exp) {
+        res.textContent = `${now_level} ~ ${target_level} まで ${calc_level(now_level, target_level, next_exp, trans_num)} exp `
+        res_2.textContent = `次のレベルまで ${calc_level(target_level, target_level + 1, 0, trans_num)} exp`
     } else if (isNaN(now_level)) {
         res.textContent = "現在レベルを設定してください"
     } else if (isNaN(target_level)) {
         res.textContent = "目標レベルを設定してください"
-    } else {
+    } else if (next_exp < 0) {
+        res.textContent = "next exp が負の値です"
+    }
+    else {
         res.textContent = `${trans_num} 転生目の 現在レベルと目標レベルの範囲は 1 ~ ${max_level} Lv です`
     }
 }
@@ -32,18 +40,15 @@ function calc_level(now_level, target_level, next_exp, num) {
 
     let sum_exp = 0
 
-    // next_exp が入力されていて 0 以外なら next_exp を合計経験値に足す
-    let i = 0
-    if (0 < next_exp) {
-        sum_exp = next_exp
-        i = 1
-    }
-    console.log(num)
+    // console.log(num)
 
     // 目標レベルまでの合計経験値を計算
     // 計算式は wiki にあったものを使用
-    for (i; i < target_level - now_level; i++) {
+    for (let i = 0; i < target_level - now_level; i++) {
         sum_exp += (now_level + i) * (num + 11) - 3
+        if (i == 0 && next_exp != 0) {
+            sum_exp = next_exp
+        }
     }
 
     return sum_exp
