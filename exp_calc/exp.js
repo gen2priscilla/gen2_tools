@@ -19,14 +19,14 @@ function ff() {
     if (next_exp > (now_level * (trans_num + 11) - 3)) {
         res.textContent = "next 経験値 が大きすぎるかも?"
     } else if (now_level >= target_level) {
-        res.textContent = "現在レベルが目標レベル以上です"
+        res.textContent = "現在レベル が 目標レベル 以上です"
     } else if (0 < now_level && now_level < max_level && 0 < target_level && target_level <= max_level && 0 <= next_exp) {
         res.textContent = `${now_level} ~ ${target_level} Lv まで ${calc_level(now_level, target_level, next_exp, trans_num)} exp `
         res_2.textContent = `${target_level + 1} Lv まで ${calc_level(target_level, target_level + 1, 0, trans_num)} exp`
     } else if (isNaN(now_level)) {
-        res.textContent = "現在レベルを設定してください"
+        res.textContent = "現在レベル を設定してください"
     } else if (isNaN(target_level)) {
-        res.textContent = "目標レベルを設定してください"
+        res.textContent = "目標レベル を設定してください"
     } else if (next_exp < 0) {
         res.textContent = "next exp が負の値です"
     }
