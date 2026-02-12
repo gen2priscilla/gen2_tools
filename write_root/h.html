@@ -8,6 +8,8 @@
 </head>
 
 <body>
+    <h1 style="font-size: medium;text-align: center">幻獣物語2 シミュレータ</h1>
+    <h2 style=" font-size: small;text-align: center;">ルートシミュレータ</h2>
     <div>今の幻獣 =>
         <span id="now_gen">なし</span>
     </div>
@@ -16,18 +18,27 @@
             なし
         </div>
     </div>
-    <br>ルート :
-    <div id="res"></div>
+    ルート :
+    <br>
+    <textarea name="a" id="res" readonly></textarea>
     <br>
     <div></div>
     <button id="prev" onclick="prev()">前</button>
-    <button id="fin" onclick="fin()">ダウンロード</button>
-    <div style="font-size: x-small;">ダウンロードボタンを押すと
-        <br>" ケットシー( 旅立ちの剣 ) -> ネコマタ( マタタビの実 )"
-        <br>という形式で書かれた[ .txt ファイル ] をダウンロードできます
-    </div>
+
     <script src="h.js">
     </script>
+    <style>
+        #next_gen {
+            min-height: 150px;
+        }
+
+        #res {
+            field-sizing: content;
+            max-width: 500px;
+            width: 100%;
+            min-height: 50px;
+        }
+    </style>
 </body>
 
 </html>
