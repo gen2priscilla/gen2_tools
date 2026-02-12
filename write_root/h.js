@@ -57,7 +57,10 @@ function init(no) {
 
 function res(data) {
     let buf = document.getElementById("res")
-    buf.textContent += data["幻獣Name"] /*+ " ( " + data["変化Name"] +" )" s*/ + "  -> "
+    if (buf.textContent.length != 0) {
+        buf.textContent += " -> "
+    }
+    buf.textContent += `${data["幻獣Name"]} ( ${data["変化Name"]} )`
 }
 
 function fin() {
@@ -82,9 +85,12 @@ function prev() {
     f.textContent = ""
 
     pr.forEach(el => {
-        console.log(el)
+        // console.log(el)
         if (el != 1) {
-            f.textContent += `${gen_data[el]["幻獣Name"]} -> `
+            if (f.textContent.length != 0) {
+                f.textContent += " -> "
+            }
+            f.textContent += `${gen_data[el]["幻獣Name"]} ( ${gen_data[el]["変化Name"]} )`
         }
     })
 
