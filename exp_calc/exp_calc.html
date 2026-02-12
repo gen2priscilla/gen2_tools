@@ -14,64 +14,65 @@
     <h2>
         <div>レベルシミュレータ</div>
     </h2>
-    <h3>
-        <div>必要経験値計算</div>
-    </h3>
-    <table border="" id="ee">
-        <tr>
-            <th>現在レベル</td>
-            <td class="input_level">
-                <button value="-5" class="add_level_now">-5</button>
-                <button value="-1" class="add_level_now">-1</button>
-                <input type="number" inputmode="numeric" id="now_level">
-                <button value="1" class="add_level_now">+1</button>
-                <button value="5" class="add_level_now">+5</button>
-            </td>
-        </tr>
-        <tr>
-            <th>目標レベル</td>
-            <td class="input_level">
-                <button value="-5" class="add_level_target">-5</button>
-                <button value="-1" class="add_level_target">-1</button>
-                <input inputmode="numeric" type="number" id="target_level">
-                <button value=" 1" class="add_level_target">+1</button>
-                <button value="5" class="add_level_target">+5</button>
+    <div id="arti">
+        <h3>
+            <div>必要経験値計算</div>
+        </h3>
+        <table id="ee">
+            <tr>
+                <th>現在レベル</td>
+                <td class="input_level">
+                    <button value="-5" class="add_level_now">-5</button>
+                    <button value="-1" class="add_level_now">-1</button>
+                    <input type="number" inputmode="numeric" id="now_level">
+                    <button value="1" class="add_level_now">+1</button>
+                    <button value="5" class="add_level_now">+5</button>
+                </td>
+            </tr>
+            <tr>
+                <th>目標レベル</td>
+                <td class="input_level">
+                    <button value="-5" class="add_level_target">-5</button>
+                    <button value="-1" class="add_level_target">-1</button>
+                    <input inputmode="numeric" type="number" id="target_level">
+                    <button value=" 1" class="add_level_target">+1</button>
+                    <button value="5" class="add_level_target">+5</button>
 
-            </td>
-        </tr>
-        <tr>
-            <th></th>
-            <td class="input_level">
-                <button value="50" class="set_level">50</button>
-                <button value="100" class="set_level">100</button>
-                <button value="150" class="set_level">150</button>
-                <button value="200" class="set_level">200</button>
-                <button value="250" class="set_level">250</button>
-            </td>
-        </tr>
-        <tr>
-            <th>next exp</td>
-            <td>
-                <input inputmode="numeric" type="number" id="next_exp">
-            </td>
-        </tr>
-        <tr>
-            <th>転生回数</td>
-            <td>
-                <select id="trans_num" onchange="c()">
-                    <option value="9" id="tr9">9転</option>
-                    <option value="8" id="tr8">8転</option>
-                    <option value="7" id="tr7">7転</option>
-                    <option value="6" id="tr6">6転</option>
-                    <option value="5" id="tr5">5転</option>
-                    <option value="4" id="tr4">4転</option>
-                    <option value="3" id="tr3">3転</option>
-                    <option value="2" id="tr2">2転</option>
-                    <option value="1" id="tr1">1転</option>
-                    <option value="0" id="tr0">0転</option>
-                </select>
-            </td>
-            <!-- </tr>
+                </td>
+            </tr>
+            <tr>
+                <th></th>
+                <td class="input_level">
+                    <button value="50" class="set_level">50</button>
+                    <button value="100" class="set_level">100</button>
+                    <button value="150" class="set_level">150</button>
+                    <button value="200" class="set_level">200</button>
+                    <button value="250" class="set_level">250</button>
+                </td>
+            </tr>
+            <tr>
+                <th>next exp</td>
+                <td class="select_data">
+                    <input inputmode="numeric" type="number" id="next_exp">
+                </td>
+            </tr>
+            <tr>
+                <th>転生回数</td>
+                <td class="select_data">
+                    <select id="trans_num" onchange="c()">
+                        <option value="9" id="tr9">9転</option>
+                        <option value="8" id="tr8">8転</option>
+                        <option value="7" id="tr7">7転</option>
+                        <option value="6" id="tr6">6転</option>
+                        <option value="5" id="tr5">5転</option>
+                        <option value="4" id="tr4">4転</option>
+                        <option value="3" id="tr3">3転</option>
+                        <option value="2" id="tr2">2転</option>
+                        <option value="1" id="tr1">1転</option>
+                        <option value="0" id="tr0">0転</option>
+                    </select>
+                </td>
+                <!-- </tr>
         <tr>
             <td colspan="2" class="tb_ab" id="aaaa">
                 <ul>
@@ -127,12 +128,13 @@
 
         </tr> -->
 
-    </table>
+        </table>
 
-    <br>
-    <div style="text-align: center;">
+    </div>
+    <div id="calc_Lv">
         <button onclick="ff()">計算する</button>
     </div>
+
     <div id="res" style="text-align: center;"></div>
     <div id="res_2" style="text-align: center;"></div>
     <script src="exp.js">
@@ -145,13 +147,14 @@
 
         #ee {
             margin: auto;
+            width: 100%;
         }
 
         #ee th {
             font-weight: normal;
             text-align: center;
-            max-width: 100px;
-            width: 100px;
+            max-width: 90px;
+            width: 90px;
         }
 
         #ee .input_level {
@@ -203,23 +206,45 @@
 
         h3 {
             font-size: smaller;
-            text-align: center;
             font-weight: normal;
+            margin-bottom: 5px;
+            margin-left: 8px;
         }
 
         input[type="number"] {
-            width: 80px;
+            width: 50px;
+            max-width: 50px;
             font-size: 16px;
         }
 
         .set_level {
-            width: 40px;
-            margin: 5px;
+            padding: 1px 1px;
+            width: 30px;
+            text-align: center;
+
+            margin: 2px;
             font-size: smaller;
         }
 
-        #tranc_num {
-            width: 80px;
+        #arti {
+            margin: auto;
+            max-width: 300px;
+            background-color: aliceblue;
+        }
+
+        .select_data {
+            display: inline;
+            margin-left: 10px;
+        }
+
+        #trans_num {
+            height: 23px;
+            width: 58px;
+        }
+
+        #calc_Lv {
+            text-align: center;
+            margin-top: 10px;
         }
     </style>
 </body>
