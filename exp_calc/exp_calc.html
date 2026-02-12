@@ -8,12 +8,15 @@
 </head>
 
 <body>
-    <h1 style="font-size: medium;">
-        <div style="text-align: center;">幻獣物語2 シミュレータ</div>
+    <h1>
+        <div>幻獣物語2 シミュレータ</div>
     </h1>
-    <h2 style="font-size:small;">
-        <div style="text-align: center;">必要経験値計算</div>
+    <h2>
+        <div>レベルシミュレータ</div>
     </h2>
+    <h3>
+        <div>必要経験値計算</div>
+    </h3>
     <table border="" id="ee">
         <tr>
             <td>現在レベル</td>
@@ -160,6 +163,7 @@
         }
 
         button {
+
             border: 1px solid grey;
             box-shadow: 0px 1px grey;
             background-color: gainsboro;
@@ -175,6 +179,31 @@
         button:hover {
             box-shadow: none;
             transform: translateY(1px);
+        }
+
+        h1 {
+            font-size: medium;
+            text-align: center;
+            color: aliceblue;
+            -webkit-text-stroke: 1px gray;
+            paint-order: stroke;
+            background-color: royalblue;
+            margin-bottom: 0px;
+        }
+
+        h2 {
+            font-size: small;
+            text-align: center;
+            color: grey;
+            paint-order: stroke;
+            background-color: lemonchiffon;
+            margin-top: 0px;
+        }
+
+        h3 {
+            font-size: smaller;
+            text-align: center;
+            font-weight: normal;
         }
 
         .set_level {
