@@ -31,7 +31,7 @@ function ff() {
         res.textContent = "next exp が負の値です"
     }
     else {
-        res.textContent = `${trans_num} 転生目の 現在レベルと目標レベルの範囲は 1 ~ ${max_level} Lv です`
+        res.textContent = `${trans_num} 転目のレベルの範囲は 1 ~ ${max_level} です`
     }
 }
 
