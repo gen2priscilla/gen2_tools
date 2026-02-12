@@ -12,13 +12,13 @@
         <div>幻獣物語2 シミュレータ</div>
     </h1>
     <h2>
-        <div>レベルシミュレータa</div>
+        <div>レベルシミュレータ</div>
     </h2>
     <div id="arti">
         <h3>
             <div>必要経験値計算</div>
         </h3>
-        <table id="ee">
+        <table border="" id="ee">
             <tr>
                 <th>現在レベル</td>
                 <td class="input_level">
@@ -52,14 +52,14 @@
             </tr>
             <tr>
                 <th>next exp</td>
-                <td class="select_data">
-                    <input inputmode="numeric" type="number" id="next_exp">
+                <td>
+                    <input class="select_data" inputmode="numeric" type="number" id="next_exp">
                 </td>
             </tr>
             <tr>
                 <th>転生回数</td>
-                <td class="select_data">
-                    <select id="trans_num" onchange="c()">
+                <td>
+                    <select class="select_data" id="trans_num" onchange="c()">
                         <option value="9" id="tr9">9転</option>
                         <option value="8" id="tr8">8転</option>
                         <option value="7" id="tr7">7転</option>
@@ -162,6 +162,11 @@
         }
 
         button {
+            width: 16%;
+            height: 20px;
+            margin-left: 1%;
+            margin-right: 1%;
+            /* line-height: 20px; */
             font-weight: normal;
             border: 1px solid lightgray;
             box-shadow: 0px 1px grey;
@@ -204,7 +209,7 @@
         }
 
         h3 {
-            font-size: small;
+            font-size: medium;
             font-weight: normal;
             margin-bottom: 5px;
             margin-left: 8px;
@@ -226,7 +231,7 @@
 
         #arti {
             margin: auto;
-            max-width: 300px;
+            max-width: 400px;
             width: 100%;
             background-color: aliceblue;
         }
@@ -243,7 +248,13 @@
 
         #calc_Lv {
             text-align: center;
+        }
+
+        #calc_Lv button {
+            text-align: center;
             margin-top: 10px;
+            margin-bottom: 10px;
+            min-height: 30px;
         }
     </style>
 </body>
