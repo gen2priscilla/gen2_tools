@@ -19,31 +19,29 @@
     </h3>
     <table border="" id="ee">
         <tr>
-            <td>現在レベル</td>
-            <td>
-                <div>
-                    <button value="-5" class="add_level_now">-5</button>
-                    <button value="-1" class="add_level_now">-1</button>
-                    <input type="number" inputmode="numeric" id="now_level" style="width: 80px;font-size: 16px;">
-                    <button value="1" class="add_level_now">+1</button>
-                    <button value="5" class="add_level_now">+5</button>
-                </div>
+            <th>現在レベル</td>
+            <td class="input_level">
+                <button value="-5" class="add_level_now">-5</button>
+                <button value="-1" class="add_level_now">-1</button>
+                <input type="number" inputmode="numeric" id="now_level">
+                <button value="1" class="add_level_now">+1</button>
+                <button value="5" class="add_level_now">+5</button>
             </td>
         </tr>
         <tr>
-            <td>目標レベル</td>
-            <td>
-                <div>
-                    <button value="-5" class="add_level_target">-5</button>
-                    <button value="-1" class="add_level_target">-1</button>
-                    <input inputmode="numeric" type="number" id="target_level" style="width: 80px;font-size: 16px;">
-                    <button value=" 1" class="add_level_target">+1</button>
-                    <button value="5" class="add_level_target">+5</button>
-                </div>
+            <th>目標レベル</td>
+            <td class="input_level">
+                <button value="-5" class="add_level_target">-5</button>
+                <button value="-1" class="add_level_target">-1</button>
+                <input inputmode="numeric" type="number" id="target_level">
+                <button value=" 1" class="add_level_target">+1</button>
+                <button value="5" class="add_level_target">+5</button>
+
             </td>
         </tr>
         <tr>
-            <td colspan="2" style="text-align: center;">
+            <th></th>
+            <td class="input_level">
                 <button value="50" class="set_level">50</button>
                 <button value="100" class="set_level">100</button>
                 <button value="150" class="set_level">150</button>
@@ -52,31 +50,26 @@
             </td>
         </tr>
         <tr>
-            <td>next exp</td>
+            <th>next exp</td>
             <td>
-                <div>
-                    <input inputmode="numeric" type="number" name="next_exp" id="next_exp"
-                        style="width: 80px;font-size: 16px;">
-                </div>
+                <input inputmode="numeric" type="number" id="next_exp">
             </td>
         </tr>
         <tr>
-            <td>転生回数</td>
+            <th>転生回数</td>
             <td>
-                <div>
-                    <select id="trans_num" style="width: 80px;" onchange="c()">
-                        <option value="9" id="tr9">9転</option>
-                        <option value="8" id="tr8">8転</option>
-                        <option value="7" id="tr7">7転</option>
-                        <option value="6" id="tr6">6転</option>
-                        <option value="5" id="tr5">5転</option>
-                        <option value="4" id="tr4">4転</option>
-                        <option value="3" id="tr3">3転</option>
-                        <option value="2" id="tr2">2転</option>
-                        <option value="1" id="tr1">1転</option>
-                        <option value="0" id="tr0">0転</option>
-                    </select>
-                </div>
+                <select id="trans_num" onchange="c()">
+                    <option value="9" id="tr9">9転</option>
+                    <option value="8" id="tr8">8転</option>
+                    <option value="7" id="tr7">7転</option>
+                    <option value="6" id="tr6">6転</option>
+                    <option value="5" id="tr5">5転</option>
+                    <option value="4" id="tr4">4転</option>
+                    <option value="3" id="tr3">3転</option>
+                    <option value="2" id="tr2">2転</option>
+                    <option value="1" id="tr1">1転</option>
+                    <option value="0" id="tr0">0転</option>
+                </select>
             </td>
             <!-- </tr>
         <tr>
@@ -150,16 +143,19 @@
             touch-action: manipulation;
         }
 
-        ul {
-            list-style: none;
-            display: flex;
-            padding-left: 0;
-            justify-content: center;
-        }
-
-
         #ee {
             margin: auto;
+        }
+
+        #ee th {
+            font-weight: normal;
+            text-align: center;
+            max-width: 100px;
+            width: 100px;
+        }
+
+        #ee .input_level {
+            text-align: center;
         }
 
         button {
@@ -170,8 +166,6 @@
             background-color: gainsboro;
             border-radius: 2px;
         }
-
-
 
         button:active {
             transform: translateY(1px);
@@ -209,14 +203,19 @@
             font-weight: normal;
         }
 
+        input[type="number"] {
+            width: 80px;
+            font-size: 16px;
+        }
+
         .set_level {
             width: 40px;
             margin: 5px;
             font-size: smaller;
         }
 
-        .tb_ab {
-            text-align: center;
+        #tranc_num {
+            width: 80px;
         }
     </style>
 </body>
