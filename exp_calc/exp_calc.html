@@ -40,15 +40,12 @@
             </td>
         </tr>
         <tr>
-
-            <td colspan="2">
-                <ul id="ddd">
-                    <li><button value="50" class="set_level">50</button></li>
-                    <li><button value="100" class="set_level">100</button></li>
-                    <li><button value="150" class="set_level">150</button></li>
-                    <li><button value="200" class="set_level">200</button></li>
-                    <li><button value="250" class="set_level">250</button></li>
-                </ul>
+            <td colspan="2" style="text-align: center;">
+                <button value="50" class="set_level">50</button>
+                <button value="100" class="set_level">100</button>
+                <button value="150" class="set_level">150</button>
+                <button value="200" class="set_level">200</button>
+                <button value="250" class="set_level">250</button>
             </td>
         </tr>
         <tr>
@@ -64,7 +61,6 @@
             <td>転生回数</td>
             <td>
                 <div>
-
                     <select id="trans_num" style="width: 80px;" onchange="c()">
                         <option value="9" id="tr9">9転</option>
                         <option value="8" id="tr8">8転</option>
@@ -163,10 +159,27 @@
             margin: auto;
         }
 
+        button {
+            border: 1px solid black;
+            box-shadow: 0px 1px grey;
+            background-color: gainsboro;
+        }
+
+
+
+        button:active {
+            transform: translateY(1px);
+        }
+
+        button:hover {
+            box-shadow: none;
+            transform: translateY(1px);
+        }
+
         .set_level {
             width: 40px;
             margin: 5px;
-            text-align: center;
+            font-size: smaller;
         }
 
         .tb_ab {
