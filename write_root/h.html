@@ -10,26 +10,31 @@
 <body>
     <h1 style="font-size: medium;text-align: center">幻獣物語2 シミュレータ</h1>
     <h2 style=" font-size: small;text-align: center;">ルートシミュレータ</h2>
-    <div>今の幻獣 =>
-        <span id="now_gen">なし</span>
-    </div>
-    <div>次の幻獣 :
-        <div id="next_gen">
-            なし
+    <div style="text-align: center;">
+        <div>今の幻獣 :
+            <span id="now_gen">なし</span>
         </div>
-    </div>
-    ルート :
-    <br>
-    <textarea name="a" id="res" readonly></textarea>
-    <br>
-    <div></div>
-    <button id="prev" onclick="prev()">前</button>
+        <div>
+            <div>次の幻獣 :</div>
+            <div id="next_gen">
+                なし
+            </div>
+        </div>
+        <button id="prev" onclick="prev()">前</button>
+        <br>
+        <br>
+        <div>ルート :</div>
+        <textarea name="a" id="res" readonly></textarea>
+        <div><button onclick="copy()">copy</button>&emsp;<span id="copy_s"></span></div>
 
-    <script src="h.js">
-    </script>
+    </div>
+
+    <script src="h.js"></script>
     <style>
         #next_gen {
             min-height: 150px;
+            max-width: 500px;
+            display: inline-block;
         }
 
         #res {
