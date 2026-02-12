@@ -23,7 +23,7 @@ function init(no) {
     console.log(pr)
     let text = gen_data[no]
     let qq = document.getElementById("now_gen")
-    qq.textContent = ` ${no} : ${text["幻獣Name"]} ( ${text["変化Name"]} )`
+    qq.textContent = `${text["幻獣Name"]} ( ${text["変化Name"]} )`
     let b = document.getElementById("next_gen")
     b.textContent = ""
 
@@ -40,7 +40,7 @@ function init(no) {
                 created_eleme.style = "height : 30px"
                 created_eleme.style.width
                 if (gen_data[text["次"][element_]] != undefined) {
-                    created_eleme.textContent = text["次"][element_] + " : " + gen_data[text["次"][element_]]["幻獣Name"] + ` ( ${gen_data[text["次"][element_]]["変化Name"]} ) `
+                    created_eleme.textContent = /* text["次"][element_] + " : " +  */ gen_data[text["次"][element_]]["幻獣Name"] + ` ( ${gen_data[text["次"][element_]]["変化Name"]} ) `
                 } else {
                     created_eleme.textContent = text["次"][element_] + " : "
                 }
@@ -78,22 +78,39 @@ function fin() {
     link.click()
     URL.revokeObjectURL(link)
 }
+
 function prev() {
-    pr.pop()
-    let buf = pr.pop()
-    let f = document.getElementById("res")
-    f.textContent = ""
+    if (pr.length != 1) {
+        pr.pop()
+        let buf = pr.pop()
+        let f = document.getElementById("res")
+        f.textContent = ""
 
-    pr.forEach(el => {
-        // console.log(el)
-        if (el != 1) {
-            if (f.textContent.length != 0) {
-                f.textContent += " -> "
+        pr.forEach(el => {
+            // console.log(el)
+            if (el != 1) {
+                if (f.textContent.length != 0) {
+                    f.textContent += " -> "
+                }
+                f.textContent += `${gen_data[el]["幻獣Name"]} ( ${gen_data[el]["変化Name"]} )`
             }
-            f.textContent += `${gen_data[el]["幻獣Name"]} ( ${gen_data[el]["変化Name"]} )`
-        }
-    })
+        })
 
-    init(buf)
+        init(buf)
+    }
+}
+
+function copy() {
+    let buf = document.getElementById("res").textContent
+    navigator.clipboard.writeText(buf).then(
+        () => {
+            let d = document.getElementById("copy_s")
+            d.textContent = "copy!"
+            setTimeout(() => {
+                d.textContent = ""
+            }, 1300)
+        },
+        () => { }
+    )
 }
 
