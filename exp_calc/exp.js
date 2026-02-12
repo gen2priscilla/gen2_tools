@@ -36,16 +36,14 @@ function ff() {
 }
 
 //経験値計算のメイン部分
-function calc_level(now_level, target_level, next_exp, num) {
+function calc_level(now_level, target_level, next_exp, trans_num) {
 
     let sum_exp = 0
-
-    // console.log(num)
 
     // 目標レベルまでの合計経験値を計算
     // 計算式は wiki にあったものを使用
     for (let i = 0; i < target_level - now_level; i++) {
-        sum_exp += (now_level + i) * (num + 11) - 3
+        sum_exp += (now_level + i) * (trans_num + 11) - 3
         if (i == 0 && next_exp != 0) {
             sum_exp = next_exp
         }
