@@ -53,24 +53,29 @@
             <tr>
                 <th>next exp</td>
                 <td>
-                    <input class="select_data" inputmode="numeric" type="number" id="next_exp">
+                    <div class="div_needExp">
+                        <input class="select_data" inputmode="numeric" type="number" id="next_exp">
+                    </div>
                 </td>
             </tr>
             <tr>
                 <th>転生回数</td>
                 <td>
-                    <select class="select_data" id="trans_num" onchange="c()">
-                        <option value="9" id="tr9">9転</option>
-                        <option value="8" id="tr8">8転</option>
-                        <option value="7" id="tr7">7転</option>
-                        <option value="6" id="tr6">6転</option>
-                        <option value="5" id="tr5">5転</option>
-                        <option value="4" id="tr4">4転</option>
-                        <option value="3" id="tr3">3転</option>
-                        <option value="2" id="tr2">2転</option>
-                        <option value="1" id="tr1">1転</option>
-                        <option value="0" id="tr0">0転</option>
-                    </select>
+                    <div class="div_needExp">
+                        <select class="select_data" id="trans_num" onchange="c()">
+                            <option value="9" id="tr9">9転</option>
+                            <option value="8" id="tr8">8転</option>
+                            <option value="7" id="tr7">7転</option>
+                            <option value="6" id="tr6">6転</option>
+                            <option value="5" id="tr5">5転</option>
+                            <option value="4" id="tr4">4転</option>
+                            <option value="3" id="tr3">3転</option>
+                            <option value="2" id="tr2">2転</option>
+                            <option value="1" id="tr1">1転</option>
+                            <option value="0" id="tr0">0転</option>
+                        </select>
+                    </div>
+
                 </td>
                 <!-- </tr>
         <tr>
@@ -249,19 +254,19 @@
             background-color: aliceblue;
         }
 
-        .select_data {
-            display: inline;
+        .div_needExp {
             margin-left: 10px;
+            max-width: 70px;
+
         }
 
-        #next_exp {
-            max-width: 60px;
-            width: 60px;
+        .select_data {
+            display: inline;
+            min-width: 100%;
         }
 
         #trans_num {
             height: 23px;
-            width: 68px;
             border-radius: 3px;
         }
 
