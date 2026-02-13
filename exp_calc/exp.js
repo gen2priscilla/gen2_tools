@@ -22,8 +22,8 @@ function ff() {
     } else if (now_level >= target_level) {
         res.textContent = "現在レベル が 目標レベル 以上です"
     } else if (0 < now_level && now_level < max_level && 0 < target_level && target_level <= max_level && 0 <= next_exp) {
-        res.textContent = `${now_level} ~ ${target_level} Lv まで ${calc_level(now_level, target_level, next_exp, trans_num)} exp`
-        res_2.textContent = `次の Lv まで ${calc_level(target_level, target_level + 1, 0, trans_num)} exp`
+        res.textContent = `Lv ${now_level} ~ ${target_level} まで : ${calc_level(now_level, target_level, next_exp, trans_num)} exp`
+        res_2.textContent = `次のレベルまで :  ${calc_level(target_level, target_level + 1, 0, trans_num)} exp`
     } else if (isNaN(now_level)) {
         res.textContent = "現在レベル を設定してください"
     } else if (isNaN(target_level)) {
