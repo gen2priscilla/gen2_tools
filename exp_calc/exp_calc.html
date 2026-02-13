@@ -54,7 +54,7 @@
                 <th>next exp</td>
                 <td>
                     <div class="div_needExp">
-                        <input class="select_data" inputmode="numeric" type="number" id="next_exp">
+                        <input class="select_data" id="next_exp" type="number" inputmode="numeric">
                     </div>
                 </td>
             </tr>
@@ -137,7 +137,7 @@
 
     </div>
     <div id="calc_Lv">
-        <button onclick="ff()">計算する!!!</button>
+        <button onclick="ff()">計算する!</button>
     </div>
 
     <div id="res" style="text-align: center;"></div>
@@ -171,8 +171,6 @@
         #ee .input_level {
             text-align: center;
         }
-
-
 
         button {
             font-size: small;
@@ -257,18 +255,20 @@
 
         .div_needExp {
             margin-left: 10px;
-            max-width: 70px;
-
+            width: 80px;
         }
 
-        .select_data {
-            display: inline;
-            min-width: 100%;
+        #next_exp {
+            box-sizing: border-box;
+            max-width: 100px;
+            width: 80px;
         }
 
         #trans_num {
+            padding: 2px;
             font-size: 16px;
             height: 23px;
+            width: 80px;
             border-radius: 3px;
         }
 
