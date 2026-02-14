@@ -14,6 +14,10 @@
     <h2>
         <div>レベルシミュレータ</div>
     </h2>
+    <ul>
+        <li>※ シミュレーション結果には多少の誤差が生じる場合があります。
+            ご了承ください。</li>
+    </ul>
     <div id="arti">
         <h3>
             <div>必要経験値計算</div>
@@ -134,20 +138,27 @@
         </tr> -->
 
         </table>
+        <div id="calc_Lv">
+            <button onclick="ff()">計算する !</button>
+        </div>
 
-    </div>
-    <div id="calc_Lv">
-        <button onclick="ff()">計算する !</button>
+        <div id="res" style="text-align: center;"></div>
+        <div id="res_2" style="text-align: center;"></div>
+        <div class="border"></div>
     </div>
 
-    <div id="res" style="text-align: center;"></div>
-    <div id="res_2" style="text-align: center;"></div>
+
+
     <script src="exp.js">
 
     </script>
     <style>
         html {
             touch-action: manipulation;
+        }
+
+        body {
+            margin: 0px;
         }
 
         #ee {
@@ -195,6 +206,7 @@
             transform: translateY(1px);
         }
 
+
         h1 {
             height: 40px;
             line-height: 40px;
@@ -205,7 +217,8 @@
             -webkit-text-stroke: 1px gray;
             paint-order: stroke;
             background-color: royalblue;
-            margin-bottom: 0px;
+            margin: 0px;
+
         }
 
         h2 {
@@ -227,6 +240,14 @@
             margin-left: 8px;
         }
 
+        ul {
+            list-style: none;
+            padding-left: 0px;
+            text-align: center;
+            color: grey;
+            font-size: x-small;
+        }
+
         input[type="number"] {
             vertical-align: middle;
             display: inline-block;
@@ -234,6 +255,13 @@
             max-height: 30px;
             max-width: 50px;
             font-size: 16px;
+        }
+
+        .border {
+            text-align: center;
+            margin-top: 20px;
+
+            border: 1px dashed grey;
         }
 
         .set_level {
