@@ -37,6 +37,7 @@ function init(no) {
             Object.keys(text["次"]).forEach(element_ => {
 
                 let created_eleme = document.createElement("button")
+                created_eleme.className = "next_button"
                 created_eleme.style = "height : 30px"
                 created_eleme.style.width
                 if (gen_data[text["次"][element_]] != undefined) {
