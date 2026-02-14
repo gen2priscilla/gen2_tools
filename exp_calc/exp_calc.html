@@ -14,10 +14,14 @@
     <h2>
         <div>レベルシミュレータ</div>
     </h2>
-    <ul>
-        <li>※ シミュレーション結果には多少の誤差が生じる場合があります。
-            ご了承ください。</li>
-    </ul>
+    <div id="atens">
+        <ul>
+            <li>
+                <div>※ シミュレーション結果には多少の誤差が生じる場合があります。<br> ご了承ください。</div>
+            </li>
+        </ul>
+    </div>
+
     <div id="arti">
         <h3>
             <div>必要経験値計算</div>
@@ -241,11 +245,13 @@
         }
 
         ul {
+            margin: auto;
             list-style: none;
-            padding-left: 0px;
-            text-align: center;
+            padding-left: 1em;
+            /* text-align: center; */
             color: grey;
             font-size: x-small;
+            text-indent: -1em;
         }
 
         input[type="number"] {
@@ -272,6 +278,12 @@
             text-align: center;
             margin: 2px;
             font-size: smaller;
+        }
+
+        #atens {
+            margin: auto;
+            max-width: 400px;
+            width: 100%;
         }
 
         #arti {
