@@ -5,14 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>経験値シミュレータ | シミュレータ</title>
+    <link rel="stylesheet" href="/gen2_tools/master.css">
 </head>
 
 <body>
-    <div>
-        <h1>
-            <div>幻獣物語2 シミュレータ</div>
-        </h1>
-        <button id="hum" onclick="hum()">≡</button>
+
+    <h1>幻獣物語2 シミュレータ</h1>
+    <button class="hum" onclick="hum()">≡</button>
+    <div class="hum_menu" id="fff">
+        <ul>
+            <li><a id="aa" href="/gen2_tools/index.html">トップページ</a><span class="arr">></span></li>
+            <li><a href="/gen2_tools/exp_calc/exp_calc.html">経験値計算機</a><span class="arr">></span></li>
+            <li><a href="/gen2_tools/write_root/h.html">ルートシミュレータ</a><span class="arr">></span></li>
+            <!-- <li><a href=""></a></li> -->
+        </ul>
     </div>
 
     <h2>
@@ -89,61 +95,6 @@
                     </div>
 
                 </td>
-                <!-- </tr>
-        <tr>
-            <td colspan="2" class="tb_ab" id="aaaa">
-                <ul>
-                    <li>
-                        <input type="radio" name="a1" id="a1_10%">
-                        <label for="a1_10%">習熟/記念</label>
-                    </li>
-                    <li>
-                        <input type="radio" name="a1" id="a1_20%">
-                        <label for="a1_20%">博識</labe>
-                    </li>
-                    <li>
-                        <input type="radio" name="a1" id="a1_30%">
-                        <label for="a1_30%">早熟</label>
-                    </li>
-                    <li>
-                        <input type="radio" name="a1" id="a1_40%">
-                        <label for="a1_40%">共栄</label>
-                    </li>
-                    <li>
-                        <input type="radio" name="a1" id="a1_0%">
-                        <label for="a1_0%">なし</label>
-                    </li>
-                </ul>
-            </td>
-
-        </tr>
-        <tr>
-            <td colspan="2" class="tb_ab">
-                <ul>
-                    <li>
-                        <input type="radio" name="a2" id="10%">
-                        <label for="10%">習熟/記念</label>
-                    </li>
-                    <li>
-                        <input type="radio" name="a2" id="20%">
-                        <label for="20%">博識</labe>
-                    </li>
-                    <li>
-                        <input type="radio" name="a2" id="30%">
-                        <label for="30%">早熟</label>
-                    </li>
-                    <li>
-                        <input type="radio" name="a2" id="40%">
-                        <label for="40%">共栄</label>
-                    </li>
-                    <li>
-                        <input type="radio" name="a2" id="0%">
-                        <label for="0%">なし</label>
-                    </li>
-                </ul>
-            </td>
-
-        </tr> -->
 
         </table>
         <div id="calc_Lv">
@@ -157,18 +108,9 @@
 
 
 
-    <script src="exp.js">
-
-    </script>
+    <script src="exp.js"></script>
+    <script src="/gen2_tools/master.js"></script>
     <style>
-        html {
-            touch-action: manipulation;
-        }
-
-        body {
-            margin: 0px;
-        }
-
         #ee {
             margin: auto;
             width: 100%;
@@ -191,7 +133,7 @@
             text-align: center;
         }
 
-        button:not(#hum) {
+        button:not(.hum) {
             font-size: small;
             width: 14%;
             padding: 4px;
@@ -205,50 +147,17 @@
             border-radius: 2px;
         }
 
-        button:active:not(#hum) {
+        button:active:not(.hum) {
             transform: translateY(1px);
         }
 
-        button:hover:not(#hum) {
+        button:hover:not(.hum) {
             box-shadow: none;
             transform: translateY(1px);
         }
 
 
-        h1 {
-            height: 40px;
-            line-height: 40px;
-            font-family: sans-serif;
-            font-size: large;
-            text-align: center;
-            color: aliceblue;
-            -webkit-text-stroke: 1px gray;
-            paint-order: stroke;
-            background-color: royalblue;
-            margin: 0px;
-
-        }
-
-        h2 {
-            height: 30px;
-            line-height: 30px;
-            font-family: sans-serif;
-            font-size: medium;
-            text-align: center;
-            color: grey;
-            paint-order: stroke;
-            background-color: lemonchiffon;
-            margin-top: 0px;
-        }
-
-        h3 {
-            font-size: medium;
-            /* font-weight: normal; */
-            margin-bottom: 5px;
-            margin-left: 8px;
-        }
-
-        ul {
+        #atens ul {
             margin: auto;
             list-style: none;
             padding-left: 1em;
@@ -293,7 +202,7 @@
         #arti {
             margin: auto;
             max-width: 400px;
-            width: 100%;
+            width: 90%;
             background-color: aliceblue;
         }
 
@@ -329,18 +238,6 @@
             min-width: 100px;
             min-height: 30px;
             font-size: medium;
-        }
-
-        #hum {
-            position: absolute;
-            top: 0px;
-            right: 0px;
-            background-color: transparent;
-            width: 40px;
-            height: 39px;
-            border: none;
-            color: white;
-            font-size: larger;
         }
     </style>
 </body>
