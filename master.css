@@ -42,4 +42,5 @@ h2 {
     border: none;
     color: white;
     font-size: larger;
+    z-index: 100;
 }

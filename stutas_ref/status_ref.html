@@ -11,7 +11,24 @@
     <div>
         <h1>幻獣物語2 シミュレータ</h1>
         <button class="hum" onclick="hum()">≡</button>
+        <div class="hum_menu" id="fff">
+
+
+            <ul>
+                <li><a href="/gen2_tools/index.html">トップページ</a><span class="arr">></span></li>
+                <li><a href="/gen2_tools/exp_calc/exp_calc.html">経験値計算機</a><span class="arr">></span></li>
+                <li><a href="/gen2_tools/write_root/h.html">ルートシミュレータ</a><span class="arr">></span></li>
+                <!-- <li><a href=""></a></li> -->
+            </ul>
+
+
+
+        </div>
+
+        <!-- <div id="qwer"></div> -->
     </div>
+    </div>
+
     <h2>ステータス参考</h2>
     <div id="R">
         <div>A : 20000</div>
@@ -105,6 +122,49 @@
     <link rel="stylesheet" href="/gen2_tools/master.css">
     <script src="./status_ref.js"></script>
     <style>
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .hum_menu {
+            position: absolute;
+            display: none;
+        }
+
+        .hum_menu.as {
+            display: block;
+            position: absolute;
+            /* text-align: center; */
+            transform: translateX(-50%);
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            background-color: rgb(211 211 211 / 0.9);
+        }
+
+        .arr {
+            margin-left: auto;
+        }
+
+        ul {
+            list-style: none;
+            padding-top: 30px;
+            padding-left: 0px;
+
+        }
+
+        li {
+            display: flex;
+            border: 1px solid, black;
+            padding: 3px 10px;
+            margin: 5px auto;
+            width: 200px;
+        }
+
+
+
         .V th,
         td {
             width: 80px;
