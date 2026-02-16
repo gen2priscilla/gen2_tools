@@ -13,29 +13,112 @@
         <button href="/gen2_tools/index.html" class="hum" onclick="hum()">≡</button>
     </div>
     <h2>ステータス参考</h2>
+    <div id="R">
+        <div>A : 20000</div>
+        <table border="1" class="V">
+            <tr>
+                <th>アビリティ</th>
+                <td>Stamina</td>
+                <td>Attack</td>
+                <td>Defence</td>
+            </tr>
+            <tr>
+                <th>遊戯</th>
+                <td>4000</td>
+                <td>16000</td>
+                <td>4000</td>
+            </tr>
+            <tr>
+                <th>慈恵</th>
+                <td>1500</td>
+                <td>17000</td>
+                <td>12000</td>
+            </tr>
+        </table>
+        <table border="1" class="V">
+            <tr>
+                <th>アビリティ</th>
+                <td>Stamina</td>
+                <td>Attack</td>
+                <td>Luck</td>
+            </tr>
+            <tr>
+                <th>戦略</th>
+                <td>24000</td>
+                <td>17000</td>
+                <td>450</td>
+            </tr>
+            <tr>
+                <th>威風</th>
+                <td>30000</td>
+                <td>18000</td>
+                <td>240</td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <div id="RR">
+        <div>D : 20000</div>
+        <table border="1" class="V">
+            <tr>
+                <th>アビリティ</th>
+                <td>Stamina</td>
+                <td>Attack</td>
+                <td>Defence</td>
+            </tr>
+            <tr>
+                <th>悪戯</th>
+                <td>4000</td>
+                <td>4000</td>
+                <td>16000</td>
+            </tr>
+            <tr>
+                <th>砕身</th>
+                <td>1500</td>
+                <td>12000</td>
+                <td>17000</td>
+            </tr>
+        </table>
+        <table border="1" class="V">
+            <tr>
+                <th>アビリティ</th>
+                <td>Stamina</td>
+                <td>Defence</td>
+                <td>Luck</td>
+            </tr>
+            <tr>
+                <th>瞑想</th>
+                <td>24000</td>
+                <td>17000</td>
+                <td>450</td>
+            </tr>
+            <tr>
+                <th>改命</th>
+                <td>30000</td>
+                <td>18000</td>
+                <td>240</td>
+            </tr>
+        </table>
+    </div>
 
-    <table border="1">
-        A : 20000
-        <tr>
-            <th>アビリティ</th>
-            <td>Stamina</td>
-            <td>Attack</td>
-            <td>Luck</td>
-        </tr>
-        <tr>
-            <th>戦略</th>
-            <td>24000</td>
-            <td>17000</td>
-            <td>450</td>
-        </tr>
-        <tr>
-            <th>威風</th>
-            <td>30000</td>
-            <td>18000</td>
-            <td>240</td>
-        </tr>
-    </table>
+
     <link rel="stylesheet" href="/gen2_tools/master.css">
+    <style>
+        .V th,
+        td {
+            width: 80px;
+        }
+
+        #R,
+        #RR {
+            text-align: center;
+        }
+
+        .V {
+            margin-left: 20px;
+            display: inline-block;
+        }
+    </style>
 </body>
 
 </html>
