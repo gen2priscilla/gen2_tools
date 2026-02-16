@@ -15,7 +15,10 @@
 
 
             <ul>
-                <li><a href="/gen2_tools/index.html">トップページ</a><span class="arr">></span></li>
+                <li>
+                    <a id="aa" href="/gen2_tools/index.html">トップページ</a>
+                    <span class="arr">></span>
+                </li>
                 <li><a href="/gen2_tools/exp_calc/exp_calc.html">経験値計算機</a><span class="arr">></span></li>
                 <li><a href="/gen2_tools/write_root/h.html">ルートシミュレータ</a><span class="arr">></span></li>
                 <!-- <li><a href=""></a></li> -->
@@ -123,8 +126,14 @@
     <script src="./status_ref.js"></script>
     <style>
         a {
+            /* display: block; */
             text-decoration: none;
             color: black;
+            display: block;
+            width: 100%;
+            padding: 3px 10px;
+
+            border: 1px solid, black;
         }
 
         .hum_menu {
@@ -145,7 +154,10 @@
         }
 
         .arr {
-            margin-left: auto;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
         }
 
         ul {
@@ -156,11 +168,16 @@
         }
 
         li {
+            position: relative;
             display: flex;
-            border: 1px solid, black;
-            padding: 3px 10px;
+            background-color: gainsboro;
+            /* padding: 3px 10px; */
             margin: 5px auto;
             width: 200px;
+        }
+
+        li:hover {
+            background-color: lightgrey;
         }
 
 
