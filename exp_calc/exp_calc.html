@@ -8,9 +8,13 @@
 </head>
 
 <body>
-    <h1>
-        <div>幻獣物語2 シミュレータ</div>
-    </h1>
+    <div>
+        <h1>
+            <div>幻獣物語2 シミュレータ</div>
+        </h1>
+        <button id="hum" onclick="hum()">≡</button>
+    </div>
+
     <h2>
         <div>レベルシミュレータ</div>
     </h2>
@@ -187,7 +191,7 @@
             text-align: center;
         }
 
-        button {
+        button:not(#hum) {
             font-size: small;
             width: 14%;
             padding: 4px;
@@ -201,11 +205,11 @@
             border-radius: 2px;
         }
 
-        button:active {
+        button:active:not(#hum) {
             transform: translateY(1px);
         }
 
-        button:hover {
+        button:hover:not(#hum) {
             box-shadow: none;
             transform: translateY(1px);
         }
@@ -325,6 +329,18 @@
             min-width: 100px;
             min-height: 30px;
             font-size: medium;
+        }
+
+        #hum {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            background-color: transparent;
+            width: 40px;
+            height: 39px;
+            border: none;
+            color: white;
+            font-size: larger;
         }
     </style>
 </body>
