@@ -1,0 +1,63 @@
+<!doctype html>
+<html class="no-js" lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>タイトル</title>
+</head>
+
+<body>
+    <div>防具ステータスシミュ</div>
+
+    <div id="now_ge"></div>
+    <table border="1">
+        <tr>
+            <th style="width: 200px;">a</th>
+            <td style="width: 200px"></td>
+            <td style="width: 200px"></td>
+        </tr>
+        <tr>
+            <th style="width: 200px;">stamina</th>
+            <td style="width: 200px"><input type="number" id="stamina" class="input_status" value="4000"></td>
+            <td style="width: 200px">
+                <div id="stamina_re"></div>
+            </td>
+        </tr>
+        <tr>
+            <th style="width: 200px;">attack</th>
+            <td style="width: 200px"><input type="number" id="attack" class="input_status" value="2000"></td>
+            <td style="width: 200px">
+                <div id="attack_re"></div>
+            </td>
+        </tr>
+        <tr>
+            <th style="width: 200px;">defence</th>
+            <td style="width: 200px"><input type="number" id="defence" class="input_status" value="2000"></td>
+            <td style="width: 200px">
+                <div id="defence_re"></div>
+            </td>
+        </tr>
+        <tr>
+            <th style="width: 200px;">luck</th>
+            <td style="width: 200px"><input type="number" id="luck" class="input_status" value="6"></td>
+            <td style="width: 200px">
+                <div id="luck_re"></div>
+            </td>
+        </tr>
+
+    </table>
+    <br>
+    <select id="abi_1" class="input_status">
+        <option>なし</option>
+    </select>
+    <select id="abi_2" class="input_status">
+        <option>なし</option>
+    </select>
+
+    <script src="main.js"></script>
+    <script>
+        input_abi()
+    </script>
+</body>
+
+</html>
