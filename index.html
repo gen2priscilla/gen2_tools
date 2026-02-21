@@ -13,18 +13,43 @@
         gtag('js', new Date());
         gtag('config', 'G-G45ZGEGKLB');
     </script>
+    <link rel="stylesheet" href="/gen2_tools/master.css">
 </head>
 
 <body>
-    <div> シミュレーションツール</div>
-    <a href="./exp_calc/exp_calc.html">経験値計算機</a>
-    <br>
-    <a href="./write_root/h.html">ルートシミュレータ</a>
-    <br>
-    <a href="./stutas_ref/status_ref.html">ステータス参考</a>
-    <br>
-    <a href="./status_calc/status.html">アビリティ計算</a>
+    <h1>幻獣物語2 シミュレータ</h1>
+    <button class="hum" onclick="hum()">≡</button>
+    <div class="hum_menu" id="fff">
+        <ul>
+            <li><a id="aa" href="/gen2_tools/index.html">トップページ</a><span class="arr">></span></li>
+            <li><a href="/gen2_tools/exp_calc/exp_calc.html">経験値計算機</a><span class="arr">></span></li>
+            <li><a href="/gen2_tools/write_root/h.html">ルートシミュレータ</a><span class="arr">></span></li>
+            <!-- <li><a href=""></a></li> -->
+        </ul>
+    </div>
+    <h2>シミュレーションツール</h2>
 
+    <div id="ar">
+        <div>
+            <a href="./exp_calc/exp_calc.html">経験値計算機</a>
+        </div>
+        <div>
+            <a href="./write_root/h.html">ルートシミュレータ</a>
+        </div>
+        <div>
+            <a href="./stutas_ref/status_ref.html">ステータス参考</a>
+        </div>
+        <div>
+            <a href="./status_calc/status.html">アビリティ計算</a>
+        </div>
+    </div>
+
+    <script src="/gen2_tools/master.js"></script>
+    <style>
+        #ar {
+            text-align: center;
+        }
+    </style>
 </body>
 
 </html>
