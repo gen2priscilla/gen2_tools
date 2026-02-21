@@ -1,7 +1,24 @@
+const url = "/gen2_tools/data/armor_list.json"
+let armor_data = new Array
+
+fetch(url)
+    .then((response) => {
+        if (!response.ok) {
+            throw new Error("Network response was not ok.");
+            // Errorが発生したら、ここで処理を中断して、下記のcatchに移行する
+        }
+        return response.json();
+    })
+    .then((json) => {
+        armor_data = structuredClone(json);
+        input_abi()
+    })
+    .catch((error) => console.log(error))
+
+
 
 //実際にセット
 function input_abi() {
-    let aaa = document.getElementById("abi_2")
     set_armor("armor")
     set_armor_abi("abi_2")
 }
@@ -22,6 +39,7 @@ function set_armor(target_id) {
     }
     let _el_ar = document.getElementById(target_id)
 
+
     Object.entries(armor_order).forEach(([key, val]) => {
 
         let created_el = document.createElement("optgroup")
@@ -33,13 +51,19 @@ function set_armor(target_id) {
         let a = document.getElementById(created_el.id)
 
         val.forEach(element => {
+            armor_data.forEach(val => {
+                if (element == val["ability"]) {
+                    let armor_option = document.createElement("option")
+                    armor_option.value = val["name"]
+                    armor_option.textContent = `${val["ability"]} : ${val["name"]}`
 
-            let armor_option = document.createElement("option")
-            armor_option.textContent = element
+                    a.appendChild(armor_option)
+                }
+            })
 
-            a.appendChild(armor_option)
         })
     })
+
 }
 
 function set_armor_abi(target_id) {
@@ -93,22 +117,43 @@ function calc() {
     qq1 = document.getElementById("armor")
     qq2 = document.getElementById("abi_2")
     qq3 = document.getElementById("armor_plus")
-
+    qq1 = armor_data.find(ele => ele["name"] == qq1.value)
     let ob = new Object()
     ob.stamina = parseInt(q1.value)
     ob.attack = parseInt(q3.value)
-    ob.defence = parseInt(q5.value)
+    ob.defence = parseInt(q5.value) * (1 + 0.01 * qq1.grade)
+
     ob.luck = parseInt(q7.value)
 
-    let buff = abi(qq1.value, ob, qq3.value)
+    let buff = abi(qq1.ability, ob, qq3.value)
     let res = abi(qq2.value, buff, qq3.value)
+
+    //小数点以下切り捨て処理
+    Object.keys(res).map(key =>
+        res[key] = Math.floor(res[key])
+    )
 
     q2.textContent = res.stamina
     q4.textContent = res.attack
-    q6.textContent = res.defence
+    q6.textContent = res.defence + ddd()
     q8.textContent = res.luck
-}
 
+}
+function ddd() {
+    let def = 0
+    let r = document.getElementById("armor_plus").value
+
+    let d = document.getElementById("armor").value
+    d = armor_data.find(ele => ele["name"] == d)
+
+    if (r > 10) {
+        def = r * (30 + d.grade) / 100
+    } else {
+        def = r * (20 + d.grade) / 100
+    }
+    def = Math.ceil(d.base_DEF * def) + d.base_DEF
+    return def
+}
 
 //防具アビリティ計算
 function abi(abi_name, gen_status, grade) {
@@ -116,13 +161,11 @@ function abi(abi_name, gen_status, grade) {
     let buf = structuredClone(gen_status);
     let aaaaaa;
 
-    //小数点以下切り捨て処理
+    //0埋め
     Object.keys(buf).map(key => {
         if (isNaN(buf[key])) {
             buf[key] = 0
         }
-        console.log(buf[key])
-        buf[key] = Math.floor(buf[key])
     }
     )
 
@@ -318,11 +361,6 @@ function abi(abi_name, gen_status, grade) {
             break;
     }
 
-    //小数点以下切り捨て処理
-    Object.keys(buf).map(key =>
-        buf[key] = Math.floor(buf[key])
-    )
-
     return buf;
 
 }
@@ -334,5 +372,8 @@ function add_eve() {
         element.addEventListener("change", calc)
         element.addEventListener("blur", calc)
     })
+    let id = document.getElementById("armor_plus")
+    id.addEventListener("change", calc)
+    id.addEventListener("blur", calc)
 }
 add_eve()
