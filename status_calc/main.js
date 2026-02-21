@@ -16,7 +16,7 @@ function set_armor(target_id) {
         "D変換": ["砕身", "悪戯", "改命", "瞑想"],
         "L": ["博打", "才華", "浪漫"],
         "SAD増加": ["大帝", "修羅", "一八", "覇王", "天佑", "加護"],
-        "": ["雲竜", "生存", "虎砲", "闘争", "護鶴", "防衛"],
+        "強化 2": ["雲竜", "生存", "虎砲", "闘争", "護鶴", "防衛"],
         "属性": ["獣属", "魔属", "霊属", "龍属", "地属", "無属"],
         "その他": ["成長", "持久", "底力", "強固", "頑固", "鉄壁", "激運", "天運"]
     }
@@ -44,12 +44,11 @@ function set_armor(target_id) {
 
 function set_armor_abi(target_id) {
     let ability_name = {
-        // "基礎 2": ["勇将", "猛皇", "猛将", "賢皇", "賢将"],
-
         "S変換": ["誘惑"],
         "A変換": ["威風", "戦略", "慈恵", "遊戯"],
         "D変換": ["砕身", "悪戯", "改命", "瞑想"],
-        "強化": ["雲竜", "生存", "虎砲", "闘争", "護鶴", "防衛"],
+        // "強化": ["勇将", "猛皇", "猛将", "賢皇", "賢将"],
+        "強化"/*強化 2*/: ["雲竜", "生存", "虎砲", "闘争", "護鶴", "防衛"],
         "L": ["博打", "才華", "浪漫"],
         "SAD増加": ["大帝", "修羅", "一八", "覇王", "天佑", "加護"],
         "属性": ["獣属", "魔属", "霊属", "龍属", "地属", "無属"],
@@ -93,6 +92,7 @@ function calc() {
 
     qq1 = document.getElementById("armor")
     qq2 = document.getElementById("abi_2")
+    qq3 = document.getElementById("armor_plus")
 
     let ob = new Object()
     ob.stamina = parseInt(q1.value)
@@ -100,8 +100,8 @@ function calc() {
     ob.defence = parseInt(q5.value)
     ob.luck = parseInt(q7.value)
 
-    let buff = abi(qq1.value, ob)
-    let res = abi(qq2.value, buff)
+    let buff = abi(qq1.value, ob, qq3.value)
+    let res = abi(qq2.value, buff, qq3.value)
 
     q2.textContent = res.stamina
     q4.textContent = res.attack
@@ -111,10 +111,20 @@ function calc() {
 
 
 //防具アビリティ計算
-function abi(abi_name, gen_status /*, grade*/) {
-    grade = 20
+function abi(abi_name, gen_status, grade) {
+    grade = parseInt(grade)
     let buf = structuredClone(gen_status);
     let aaaaaa;
+
+    //小数点以下切り捨て処理
+    Object.keys(buf).map(key => {
+        if (isNaN(buf[key])) {
+            buf[key] = 0
+        }
+        console.log(buf[key])
+        buf[key] = Math.floor(buf[key])
+    }
+    )
 
     switch (abi_name) {
 
@@ -307,6 +317,11 @@ function abi(abi_name, gen_status /*, grade*/) {
         default:
             break;
     }
+
+    //小数点以下切り捨て処理
+    Object.keys(buf).map(key =>
+        buf[key] = Math.floor(buf[key])
+    )
 
     return buf;
 
