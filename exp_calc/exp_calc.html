@@ -39,7 +39,18 @@
         </h3>
         <table border="" id="ee">
             <tr>
-                <th>現在レベル</td>
+                <th></th>
+                <td class="input_level">
+                    <button value="50" class="set_now_level">50</button>
+                    <button value="100" class="set_now_level">100</button>
+                    <button value="150" class="set_now_level">150</button>
+                    <button value="200" class="set_now_level">200</button>
+                    <button value="230" class="set_now_level">230</button>
+                    <button value="250" class="set_now_level">250</button>
+                </td>
+            </tr>
+            <tr>
+                <th>現在 Lv</td>
                 <td class="input_level">
                     <button value="-5" class="add_level_now">-5</button>
                     <button value="-1" class="add_level_now">-1</button>
@@ -49,7 +60,7 @@
                 </td>
             </tr>
             <tr>
-                <th>目標レベル</td>
+                <th>目標 Lv</td>
                 <td class="input_level">
                     <button value="-5" class="add_level_target">-5</button>
                     <button value="-1" class="add_level_target">-1</button>
@@ -71,15 +82,16 @@
                 </td>
             </tr>
             <tr>
-                <th>next exp</td>
+                <th>Next</td>
                 <td>
                     <div class="div_needExp">
                         <input class="select_data" id="next_exp" type="number" inputmode="numeric">
+                        <span>Exp</span>
                     </div>
                 </td>
             </tr>
             <tr>
-                <th>転生回数</td>
+                <th>転生数</td>
                 <td>
                     <div class="div_needExp">
                         <select class="select_data" id="trans_num" onchange="c()">
@@ -97,7 +109,6 @@
                     </div>
 
                 </td>
-
         </table>
         <div id="calc_Lv">
             <button onclick="ff()">計算する !</button>
@@ -127,8 +138,8 @@
         #ee th {
             font-weight: normal;
             text-align: center;
-            max-width: 90px;
-            width: 90px;
+            max-width: 80px;
+            width: 68px;
         }
 
         #ee .input_level {
@@ -207,9 +218,14 @@
         }
 
         .div_needExp {
+            display: inline;
             margin-left: 10px;
             width: 80px;
             height: 100%;
+        }
+
+        .div_needExp span {
+            margin-left: 5px;
         }
 
         #next_exp {
