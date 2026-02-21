@@ -23,7 +23,7 @@
     </div>
 
     <h2>
-        <div>レベルシミュレータ</div>
+        レベルシミュレータ
     </h2>
     <div id="atens">
         <ul>
@@ -66,6 +66,7 @@
                     <button value="100" class="set_level">100</button>
                     <button value="150" class="set_level">150</button>
                     <button value="200" class="set_level">200</button>
+                    <button value="230" class="set_level">230</button>
                     <button value="250" class="set_level">250</button>
                 </td>
             </tr>
@@ -184,13 +185,11 @@
             border: 1px dashed grey;
         }
 
-        .set_level {
+        button:is(.set_level) {
             padding: 4px 1px;
-            max-width: 40px;
-            min-width: 40px;
             height: 80%;
             text-align: center;
-            margin: 2px;
+            margin: 1px;
             font-size: smaller;
         }
 
