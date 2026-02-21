@@ -24,37 +24,33 @@
 
     <div id="now_ge"></div>
     <div id="main">
-        <table border="1">
+        <table border="1" class="status">
+
             <tr>
-                <th style="width: 200px;">a</th>
-                <td style="width: 200px"></td>
-                <td style="width: 200px"></td>
-            </tr>
-            <tr>
-                <th style="width: 200px;">stamina</th>
-                <td style="width: 200px"><input type="number" id="stamina" class="input_status" value="4000"></td>
-                <td style="width: 200px">
+                <th>stamina</th>
+                <td><input type="number" id="stamina" class="input_status" value="4000"></td>
+                <td>
                     <div id="stamina_re"></div>
                 </td>
             </tr>
             <tr>
-                <th style="width: 200px;">attack</th>
-                <td style="width: 200px"><input type="number" id="attack" class="input_status" value="2000"></td>
-                <td style="width: 200px">
+                <th>attack</th>
+                <td><input type="number" id="attack" class="input_status" value="2000"></td>
+                <td>
                     <div id="attack_re"></div>
                 </td>
             </tr>
             <tr>
-                <th style="width: 200px;">defence</th>
-                <td style="width: 200px"><input type="number" id="defence" class="input_status" value="2000"></td>
-                <td style="width: 200px">
+                <th>defence</th>
+                <td><input type="number" id="defence" class="input_status" value="2000"></td>
+                <td>
                     <div id="defence_re"></div>
                 </td>
             </tr>
             <tr>
-                <th style="width: 200px;">luck</th>
-                <td style="width: 200px"><input type="number" id="luck" class="input_status" value="6"></td>
-                <td style="width: 200px">
+                <th>luck</th>
+                <td><input type="number" id="luck" class="input_status" value="6"></td>
+                <td>
                     <div id="luck_re"></div>
                 </td>
             </tr>
@@ -104,6 +100,14 @@
         #main {
             width: 90%;
             margin: auto;
+        }
+
+        .status th {
+            width: 200px;
+        }
+
+        .status td {
+            width: 200px;
         }
     </style>
 </body>
