@@ -29,46 +29,55 @@
 
     <h2>アビリティ参考</h2>
     <div id="R">
-        <div>A : 20000</div>
-        <table border="1" class="V">
+        <table border="" class="V">
             <tr>
                 <th></th>
                 <td>Stamina</td>
                 <td>Attack</td>
                 <td>Defence</td>
-            </tr>
-            <tr>
-                <th>遊戯</th>
-                <td>4000</td>
-                <td>16000</td>
-                <td>4000</td>
-            </tr>
-            <tr>
-                <th>慈恵</th>
-                <td>1500</td>
-                <td>17000</td>
-                <td>12000</td>
-            </tr>
-        </table>
-        <table border="1" class="V">
-            <tr>
-                <th></th>
-                <td>Stamina</td>
-                <td>Attack</td>
                 <td>Luck</td>
             </tr>
             <tr>
-                <th>戦略</th>
-                <td>24000</td>
-                <td>17000</td>
-                <td>450</td>
+                <th></th>
+                <td><input id="A_st" type="number" inputmode="tel" value="0"></td>
+                <td><input id="A_at" type="number" inputmode="tel" value="20000"></td>
+                <td><input id="A_de" type="number" inputmode="tel" value="0"></td>
+                <td><input id="A_lu" type="number" inputmode="tel" value="0"></td>
             </tr>
             <tr>
                 <th>威風</th>
-                <td>30000</td>
-                <td>18000</td>
-                <td>240</td>
+                <td id="ihu_s_res"></td>
+                <td id="ihu_s_res"></td>
+                <td id="ihu_s_res"></td>
+                <td id="ihu_s_res"></td>
             </tr>
+            <tr>
+                <th>戦略</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <!-- <tr>
+                <td colspan="5"></td>
+            </tr> -->
+            <tr>
+                <th>慈恵</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>遊戯</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+
+
         </table>
     </div>
     <br>
@@ -119,12 +128,33 @@
 
     <script src="/gen2_tools/master.js"></script>
     <style>
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+            appearance: auto;
+            -moz-appearance: textfield;
+        }
+
+
+        input[type="number"] {
+            width: 90%;
+            height: 80%;
+
+            text-align: center;
+        }
+
         .V th,
         td {
+            height: 30px;
             width: 80px;
         }
 
-        #R,
+        #R {
+            text-align: center;
+            background-color: aliceblue;
+        }
+
         #RR {
             text-align: center;
         }
