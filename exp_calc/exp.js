@@ -62,6 +62,10 @@ window.onload = function aa() {
     d.forEach(element => {
         element.onclick = aaa
     })
+    d = this.document.querySelectorAll(".set_now_level")
+    d.forEach(element => {
+        element.onclick = bbbaa
+    })
 
     d = this.document.querySelectorAll(".set_level")
     d.forEach(element => {
@@ -87,7 +91,10 @@ function aaa() {
         htm.value = 1
     }
 }
-
+function bbbaa() {
+    let buf = document.getElementById("now_level")
+    buf.value = this.value
+}
 function bbb() {
     let buf = document.getElementById("target_level")
     buf.value = this.value
