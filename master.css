@@ -44,6 +44,21 @@ input {
     font-size: 16px;
 }
 
+.atens {
+    margin: auto;
+    max-width: 400px;
+    width: 90%;
+}
+
+.atens ul {
+    margin: auto;
+    list-style: none;
+    padding-left: 1em;
+    color: grey;
+    font-size: x-small;
+    text-indent: -1em;
+}
+
 .hum {
     position: absolute;
     top: 0px;
