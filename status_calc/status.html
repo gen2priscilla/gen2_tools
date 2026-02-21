@@ -57,7 +57,7 @@
 
         </table>
         <div id="select_butt">
-            <table border="">
+            <table border="" class="armor">
                 <tr>
                     <td>防具</td>
                     <td colspan="2">
@@ -68,12 +68,12 @@
                 </tr>
                 <tr>
                     <td>アビリティ</td>
-                    <td>
+                    <td class="abi">
                         <select id="abi_2" class="input_status">
                             <option>なし</option>
                         </select>
                     </td>
-                    <td>
+                    <td class="plus">
                         <select>
                             <option value="20">+20</option>
                             <option value="15">+15</option>
@@ -103,11 +103,24 @@
         }
 
         .status th {
-            width: 200px;
+            width: 100px;
         }
 
         .status td {
             width: 200px;
+        }
+
+        .armor select {
+            width: 100%;
+            height: 100%;
+        }
+
+        .abi {
+            width: 100px;
+        }
+
+        .plus {
+            width: 50px;
         }
     </style>
 </body>
