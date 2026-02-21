@@ -22,9 +22,19 @@
         </ul>
     </div>
 
-    <h2>防具ステータスシミュ</h2>
+    <h2>ステータスシミュ</h2>
 
-    <div id="now_ge"></div>
+    <div class="atens">
+        <ul>
+            <li>
+                ※すべての計算終了後に小数点以下切り捨て処理をしています。
+            </li>
+            <li>
+                ※ シミュレーション結果には多少の誤差が生じる場合があります。<br> ご了承ください。
+            </li>
+        </ul>
+    </div>
+    <br>
     <div id="main">
         <div id="dddd">
 
@@ -94,13 +104,14 @@
 
 
     <script src="status_calc.js"></script>
-    <script>
-        input_abi()
-    </script>
     <script src="/gen2_tools/master.js"></script>
     <style>
         td {
             height: 30px;
+        }
+
+        .atens {
+            max-width: 322px;
         }
 
         #dddd {
