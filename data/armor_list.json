@@ -4,5 +4,101 @@
         "grade": "9",
         "base_DEF": "230",
         "ability": "勇将"
+    },
+    {
+        "name": "月輪麗明",
+        "grade": "9",
+        "base_DEF": "500",
+        "ability": "勇将"
+    },
+    {
+        "name": "龍乗の修気",
+        "grade": "6",
+        "base_DEF": "210",
+        "ability": "雲竜"
+    },
+    {
+        "name": "万斛の響鼓",
+        "grade": "9",
+        "base_DEF": "170",
+        "ability": "生存"
+    },
+    {
+        "name": "深紅のドレス",
+        "grade": "9",
+        "base_DEF": "220",
+        "ability": "誘惑"
+    },
+    {
+        "name": "蚩尤ノ冥煌鎧",
+        "grade": "10",
+        "base_DEF": "245",
+        "ability": "猛皇"
+    },
+    {
+        "name": "天導の司教冠",
+        "grade": "10",
+        "base_DEF": "230",
+        "ability": "威風"
+    },
+    {
+        "name": "飛将の武冠",
+        "grade": "9",
+        "base_DEF": "35",
+        "ability": "猛将"
+    },
+    {
+        "name": "鏖魔瞳",
+        "grade": "10",
+        "base_DEF": "500",
+        "ability": "修羅"
+    },
+    {
+        "name": "オブリビオン",
+        "grade": "8",
+        "base_DEF": "180",
+        "ability": "戦略"
+    },
+    {
+        "name": "エントレンジ",
+        "grade": "5",
+        "base_DEF": "70",
+        "ability": "戦略"
+    },
+    {
+        "name": "フェアリアルヒール",
+        "grade": "10",
+        "base_DEF": "230",
+        "ability": "慈恵"
+    },
+    {
+        "name": "硝子の靴",
+        "grade": "8",
+        "base_DEF": "185",
+        "ability": "勇将"
+    },
+    {
+        "name": "綺羅羊の頭巾",
+        "grade": "10",
+        "base_DEF": "460",
+        "ability": "賢皇"
+    },
+    {
+        "name": "瞋恚ノ鬼面",
+        "grade": "10",
+        "base_DEF": "230",
+        "ability": "砕身"
+    },
+    {
+        "name": "創世の護翼",
+        "grade": "9",
+        "base_DEF": "310",
+        "ability": "賢将"
+    },
+    {
+        "name": "妖狐ノ尾",
+        "grade": "4",
+        "base_DEF": "80",
+        "ability": "悪戯"
     }
 ]
