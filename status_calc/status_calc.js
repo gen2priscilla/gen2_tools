@@ -369,11 +369,11 @@ function abi(abi_name, gen_status, grade) {
 function add_eve() {
     let id_input_status = document.querySelectorAll(".input_status")
     id_input_status.forEach(element => {
-        element.addEventListener("change", calc)
+        element.addEventListener("input", calc)
         element.addEventListener("blur", calc)
     })
     let id = document.getElementById("armor_plus")
-    id.addEventListener("change", calc)
+    id.addEventListener("input", calc)
     id.addEventListener("blur", calc)
 }
 add_eve()
