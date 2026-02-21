@@ -72,28 +72,28 @@
                 <td>Stamina</td>
                 <td>Attack</td>
                 <td>Defence</td>
-                <td>Luck</td>
+                <td class="luck">Luck</td>
             </tr>
             <tr>
                 <th></th>
                 <td><input id="A_s" class="input_A" type="number" inputmode="numeric" value="0"></td>
                 <td><input id="A_a" class="input_A" type="number" inputmode="numeric" value="20000"></td>
                 <td><input id="A_d" class="input_A" type="number" inputmode="numeric" value="0"></td>
-                <td><input id="A_l" class="input_A" type="number" inputmode="numeric" value="0"></td>
+                <td class="luck"><input id="A_l" class="input_A" type="number" inputmode="numeric" value="0"></td>
             </tr>
             <tr>
                 <th>威風</th>
                 <td id="ihu_res_s"></td>
                 <td id="ihu_res_a"></td>
                 <td id="ihu_res_d"></td>
-                <td id="ihu_res_l"></td>
+                <td id="ihu_res_l" class="luck"></td>
             </tr>
             <tr>
                 <th>戦略</th>
                 <td id="sen_res_s"></td>
                 <td id="sen_res_a"></td>
                 <td id="sen_res_d"></td>
-                <td id="sen_res_l"></td>
+                <td id="sen_res_l" class="luck"></td>
             </tr>
             <!-- <tr>
                 <td colspan="5"></td>
@@ -103,14 +103,14 @@
                 <td id="jik_res_s"></td>
                 <td id="jik_res_a"></td>
                 <td id="jik_res_d"></td>
-                <td id="jik_res_l"></td>
+                <td id="jik_res_l" class="luck"></td>
             </tr>
             <tr>
                 <th>遊戯</th>
                 <td id="yuu_res_s"></td>
                 <td id="yuu_res_a"></td>
                 <td id="yuu_res_d"></td>
-                <td id="yuu_res_l"></td>
+                <td id="yuu_res_l" class="luck"></td>
             </tr>
         </table>
     </div>
@@ -161,28 +161,28 @@
                 <td>Stamina</td>
                 <td>Attack</td>
                 <td>Defence</td>
-                <td>Luck</td>
+                <td class="luck">Luck</td>
             </tr>
             <tr>
                 <th></th>
                 <td><input id="D_s" class="input_D" type="number" inputmode="numeric" value="0"></td>
                 <td><input id="D_a" class="input_D" type="number" inputmode="numeric" value="0"></td>
                 <td><input id="D_d" class="input_D" type="number" inputmode="numeric" value="20000"></td>
-                <td><input id="D_l" class="input_D" type="number" inputmode="numeric" value="0"></td>
+                <td class="luck"><input id="D_l" class="input_D" type="number" inputmode="numeric" value="0"></td>
             </tr>
             <tr>
                 <th>砕身</th>
                 <td id="sai_res_s"></td>
                 <td id="sai_res_a"></td>
                 <td id="sai_res_d"></td>
-                <td id="sai_res_l"></td>
+                <td id="sai_res_l" class="luck"></td>
             </tr>
             <tr>
                 <th>悪戯</th>
                 <td id="ita_res_s"></td>
                 <td id="ita_res_a"></td>
                 <td id="ita_res_d"></td>
-                <td id="ita_res_l"></td>
+                <td id="ita_res_l" class="luck"></td>
             </tr>
             <!-- <tr>
                 <td colspan="5"></td>
@@ -192,14 +192,14 @@
                 <td id="kai_res_s"></td>
                 <td id="kai_res_a"></td>
                 <td id="kai_res_d"></td>
-                <td id="kai_res_l"></td>
+                <td id="kai_res_l" class="luck"></td>
             </tr>
             <tr>
                 <th>瞑想</th>
                 <td id="mei_res_s"></td>
                 <td id="mei_res_a"></td>
                 <td id="mei_res_d"></td>
-                <td id="mei_res_l"></td>
+                <td id="mei_res_l" class="luck"></td>
             </tr>
         </table>
     </div>
@@ -222,6 +222,11 @@
 
             appearance: auto;
             -moz-appearance: textfield;
+        }
+
+
+        .V td:is(.luck) {
+            width: 60px;
         }
 
         .V {
