@@ -32,35 +32,35 @@
             <tr>
                 <th></th>
                 <td>Stamina</td>
-                <td>Attack</td>
+                <td class="short_">Attack</td>
                 <td>Defence</td>
                 <td>Luck</td>
             </tr>
             <tr>
                 <th>威風</th>
                 <td>A10%の15倍</td>
-                <td>- 10%</td>
+                <td class="short_">-10%</td>
                 <td>---</td>
                 <td>A10%の0.12倍</td>
             </tr>
             <tr>
                 <th>戦略</th>
                 <td>A15%の8倍</td>
-                <td>- 15%</td>
+                <td class="short_">-15%</td>
                 <td>---</td>
                 <td>A15%の0.15倍</td>
             </tr>
             <tr>
                 <th>慈恵</th>
                 <td>A15%の0.5倍</td>
-                <td>- 15%</td>
+                <td class="short_">-15%</td>
                 <td>A15%の4倍</td>
                 <td>---</td>
             </tr>
             <tr>
                 <th>遊戯</th>
                 <td>A20%の1倍</td>
-                <td>- 20%</td>
+                <td class="short_">-20%</td>
                 <td>A20%の1倍</td>
                 <td>---</td>
             </tr>
@@ -121,35 +121,35 @@
                 <th></th>
                 <td>Stamina</td>
                 <td>Attack</td>
-                <td>Defence</td>
+                <td class="short_">Defence</td>
                 <td>Luck</td>
             </tr>
             <tr>
                 <th>砕身</th>
                 <td>D15%の0.5倍</td>
                 <td>D15%の4倍</td>
-                <td>- 15%</td>
+                <td class="short_">-15%</td>
                 <td>---</td>
             </tr>
             <tr>
                 <th>悪戯</th>
                 <td>D20%の1倍</td>
                 <td>D20%の1倍</td>
-                <td>- 20%</td>
+                <td class="short_">-20%</td>
                 <td>---</td>
             </tr>
             <tr>
                 <th>改命</th>
                 <td>D10%の15倍</td>
                 <td>---</td>
-                <td>- 10%</td>
+                <td class="short_">-10%</td>
                 <td>D10%の0.12倍</td>
             </tr>
             <tr>
                 <th>瞑想</th>
                 <td>D15%の8倍</td>
                 <td>---</td>
-                <td>- 15%</td>
+                <td class="short_">-15%</td>
                 <td>D15%の0.15倍</td>
             </tr>
 
@@ -224,6 +224,9 @@
             -moz-appearance: textfield;
         }
 
+        .V .short_ {
+            width: 60px;
+        }
 
         .V td:is(.luck) {
             width: 60px;
@@ -242,7 +245,7 @@
 
         .V td {
             height: 30px;
-            width: 110px;
+            width: 100px;
         }
 
         #R {
