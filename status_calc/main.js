@@ -1,39 +1,78 @@
 
 //実際にセット
 function input_abi() {
-    aa = document.getElementById("abi_1")
-    aaa = document.getElementById("abi_2")
-    input_aaa123(aa)
-    input_aaa123(aaa)
+    let aaa = document.getElementById("abi_2")
+    set_armor("armor")
+    set_armor_abi("abi_2")
 }
 
 
-//防具アビリティを選択肢にセット
-function input_aaa123(target_id) {
-    let ability_name = {
-        "S増加": ["生存", "勇将", "雲竜", "勇皇"],
-        "A増加": ["闘争", "虎砲", "猛将", "猛皇"],
-        "D増加": ["防衛", "護鶴", "賢将", "賢皇"],
-        "SAD増加": ["加護", "天佑", "覇王", "一八", "修羅", "大帝"],
+//防具,アビリティを選択肢にセット
+function set_armor(target_id) {
+    let armor_order = {
+        "強化": ["勇将", "猛皇", "猛将", "賢皇", "賢将"],
         "S変換": ["誘惑"],
-        "A変換": ["遊戯", "慈恵", "戦略", "威風"],
-        "D変換": ["悪戯", "砕身", "瞑想", "改命"],
-        "L変換": ["博打", "才華", "浪漫"],
+        "A変換": ["威風", "戦略", "慈恵", "遊戯"],
+        "D変換": ["砕身", "悪戯", "改命", "瞑想"],
+        "L": ["博打", "才華", "浪漫"],
+        "SAD増加": ["大帝", "修羅", "一八", "覇王", "天佑", "加護"],
+        "その他 1": ["雲竜", "生存", "虎砲", "闘争", "護鶴", "防衛"],
+        "属性": ["獣属", "魔属", "霊属", "龍属", "地属", "無属"],
+        "その他 2": ["成長", "持久", "底力", "強固", "頑固", "鉄壁", "激運", "天運"]
+    }
+    let _el_ar = document.getElementById(target_id)
+
+    Object.entries(armor_order).forEach(([key, val]) => {
+
+        let created_el = document.createElement("optgroup")
+        created_el.label = key
+        created_el.id = `armor_${key}`
+
+        _el_ar.appendChild(created_el)
+
+        let a = document.getElementById(created_el.id)
+
+        val.forEach(element => {
+
+            let armor_option = document.createElement("option")
+            armor_option.textContent = element
+
+            a.appendChild(armor_option)
+        })
+    })
+}
+
+function set_armor_abi(target_id) {
+    let ability_name = {
+        // "基礎 2": ["勇将", "猛皇", "猛将", "賢皇", "賢将"],
+
+        "S変換": ["誘惑"],
+        "A変換": ["威風", "戦略", "慈恵", "遊戯"],
+        "D変換": ["砕身", "悪戯", "改命", "瞑想"],
+        "強化": ["雲竜", "生存", "虎砲", "闘争", "護鶴", "防衛"],
+        "L": ["博打", "才華", "浪漫"],
+        "SAD増加": ["大帝", "修羅", "一八", "覇王", "天佑", "加護"],
+        "属性": ["獣属", "魔属", "霊属", "龍属", "地属", "無属"],
         "その他": ["成長", "持久", "底力", "強固", "頑固", "鉄壁", "激運", "天運"]
     }
 
-    Object.keys(ability_name).map(ability_name_index => {
-        //選択肢にindexを追加
-        let opt_group = document.createElement("optgroup")
-        opt_group.label = ability_name_index
-        opt_group.id = ability_name_index + "_" + target_id.id
-        target_id.appendChild(opt_group)
+    let a = document.getElementById(target_id)
 
-        //選択肢の追加
+    Object.entries(ability_name).forEach(([key, val]) => {
+
+        let opt_group = document.createElement("optgroup")
+        opt_group.label = key
+        opt_group.id = `armor_abi_${key}`
+
+        a.appendChild(opt_group)
+
         let id_op = document.getElementById(opt_group.id)
-        Object.keys(ability_name[ability_name_index]).forEach(element => {
+
+        val.forEach(element => {
+
             let abi_option = document.createElement("option")
-            abi_option.textContent = ability_name[ability_name_index][element]
+            abi_option.textContent = element
+
             id_op.appendChild(abi_option)
         })
     })
@@ -52,7 +91,7 @@ function calc() {
     q7 = document.getElementById("luck")
     q8 = document.getElementById("luck_re")
 
-    qq1 = document.getElementById("abi_1")
+    qq1 = document.getElementById("armor")
     qq2 = document.getElementById("abi_2")
 
     let ob = new Object()
@@ -88,7 +127,7 @@ function abi(abi_name, gen_status /*, grade*/) {
             buf.luck = gen_status.luck + 100;
             break;
         case "勇将":
-            buf.stamina = gen_status.stamina + gen_status.stamina * grade * 0.05;
+            buf.stamina = gen_status.stamina + gen_status.stamina * grade * 0.075;
             break;
         case "勇皇":
             bu.stamina = gen_status.stamina + gen_status.stamina * grade * 0.1;
