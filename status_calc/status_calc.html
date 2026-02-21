@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>防具シミュレータ | シミュレータ</title>
+    <link rel="stylesheet" href="/gen2_tools/master.css">
+</head>
+
+<body>
+    <h1>幻獣物語2 シミュレータ</h1>
+
+    <button class="hum" onclick="hum()">≡</button>
+    <div class="hum_menu" id="fff">
+        <ul>
+            <li><a id="aa" href="/gen2_tools/index.html">トップ</a><span class="arr">></span></li>
+            <li><a href="/gen2_tools/exp_calc/exp_calc.html">経験値計算機</a><span class="arr">></span></li>
+            <li><a href="/gen2_tools/write_root/h.html">ルートシミュレータ</a><span class="arr">></span></li>
+            <li><a href="/gen2_tools/status_calc/status_calc.html">アビリティ計算</a><span class="arr">></span></li>
+            <li><a href="/gen2_tools/stutas_ref/status_ref.html">ステータス参考</a><span class="arr">></span></li>
+        </ul>
+    </div>
+
+    <h2>防具ステータスシミュ</h2>
+
+    <div id="now_ge"></div>
+    <div id="main">
+        <div id="dddd">
+
+
+            <table border="1" class="status">
+
+                <tr>
+                    <th>stamina</th>
+                    <td><input id="stamina" class="input_status" type="number" inputmode="numeric" value="4000"></td>
+                    <td>
+                        <div id="stamina_re"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>attack</th>
+                    <td><input id="attack" class="input_status" type="number" inputmode="numeric" value="2000"></td>
+                    <td>
+                        <div id="attack_re"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>defence</th>
+                    <td><input id="defence" class="input_status" type="number" inputmode="numeric" value="2000"></td>
+                    <td>
+                        <div id="defence_re"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>luck</th>
+                    <td><input id="luck" class="input_status" type="number" inputmode="numeric" value="6"></td>
+                    <td>
+                        <div id="luck_re"></div>
+                    </td>
+                </tr>
+            </table>
+            <table border="" class="armor">
+                <tr>
+                    <th>防具</td>
+                    <td colspan="2">
+                        <select id="armor" class="input_status">
+                            <option>なし</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>アビリティ</td>
+                    <td class="abi">
+                        <select id="abi_2" class="input_status">
+                            <option>なし</option>
+                        </select>
+                    </td>
+                    <td id="plus_">
+                        <select id="armor_plus">
+                            <option value="20">+20</option>
+                            <option value="15">+15</option>
+                            <option value="10">+10</option>
+                            <option value="0">+0</option>
+                        </select>
+                    </td>
+                </tr>
+
+            </table>
+
+        </div>
+    </div>
+
+
+
+    <script src="status_calc.js"></script>
+    <script>
+        input_abi()
+    </script>
+    <script src="/gen2_tools/master.js"></script>
+    <style>
+        td {
+            height: 30px;
+        }
+
+        #dddd {
+            margin: auto;
+            width: fit-content;
+
+        }
+
+        #main {
+            width: 90%;
+            margin: auto;
+            background-color: aliceblue;
+        }
+
+        .status {
+            margin: auto;
+        }
+
+        .status th {
+            width: 100px;
+        }
+
+        .status td {
+            width: 100px;
+        }
+
+        input:is(.input_status) {
+            vertical-align: middle;
+            box-sizing: border-box;
+            width: 100px;
+            height: 90%;
+        }
+
+
+        .armor {
+            width: 100%;
+        }
+
+        .armor th {
+            width: 100px;
+        }
+
+        .armor select {
+            display: block;
+            margin: auto;
+            width: 98%;
+            height: 90%;
+            border-radius: 3px;
+        }
+
+        #plus_ {
+            width: 50px;
+        }
+    </style>
+</body>
+
+</html>
