@@ -54,7 +54,7 @@
                     <button value="-10" class="add_level_now">-10</button>
                     <button value="-5" class="add_level_now">-5</button>
                     <button value="-1" class="add_level_now">-1</button>
-                    <input type="number" inputmode="numeric" id="now_level">
+                    <input id="now_level" type="number" inputmode="numeric">
                     <button value="1" class="add_level_now">+1</button>
                     <button value="5" class="add_level_now">+5</button>
                     <button value="10" class="add_level_now">+10</button>
@@ -66,7 +66,7 @@
                     <button value="-10" class="add_level_target">-10</button>
                     <button value="-5" class="add_level_target">-5</button>
                     <button value="-1" class="add_level_target">-1</button>
-                    <input inputmode="numeric" type="number" id="target_level">
+                    <input id="target_level" type="number" inputmode="numeric">
                     <button value="1" class="add_level_target">+1</button>
                     <button value="5" class="add_level_target">+5</button>
                     <button value="10" class="add_level_target">+10</button>
@@ -150,8 +150,9 @@
         }
 
         button:is(.add_level_now, .add_level_target) {
-            display: flexbox;
+
             font-size: small;
+            vertical-align: middle;
             width: 10%;
             padding: 4px 0px;
             margin-left: 1px;
@@ -203,15 +204,20 @@
             vertical-align: middle;
             display: inline-block;
             width: 42px;
-            max-height: 30px;
+            /* max-height: 30px; */
             max-width: 50px;
             font-size: 16px;
+        }
+
+        .input_level input[type="number"] {
+            margin: 1px 3px;
+            height: 25px;
         }
 
         .border {
             text-align: center;
             margin-top: 20px;
-
+            height: 40px;
             border: 1px dashed grey;
         }
 
