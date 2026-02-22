@@ -69,7 +69,31 @@
                         <div id="luck_re"></div>
                     </td>
                 </tr>
-
+                <tr>
+                    <th>武器</td>
+                    <td colspan="2">
+                        <select id="weapon" class="input_status">
+                            <option>なし</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>アビリティ</td>
+                    <td class="abi">
+                        <select id="abi_1" class="input_status">
+                            <option>なし</option>
+                        </select>
+                    </td>
+                    <td id="weapon_plus_">
+                        <select id="weapon_plus" class="input_status">
+                            <option value="20">+20</option>
+                            <option value="16">+16</option>
+                            <option value="15">+15</option>
+                            <option value="10">+10</option>
+                            <option value="0">+0</option>
+                        </select>
+                    </td>
+                </tr>
                 <tr>
                     <th>防具</td>
                     <td colspan="2">
@@ -86,7 +110,7 @@
                         </select>
                     </td>
                     <td id="plus_">
-                        <select id="armor_plus">
+                        <select id="armor_plus" class="input_status">
                             <option value="20">+20</option>
                             <option value="15">+15</option>
                             <option value="10">+10</option>
@@ -96,15 +120,37 @@
                 </tr>
 
             </table>
-
+            <table border="" id="abi_hatu">
+                <tr>
+                    <th>アビ 1 発動率</th>
+                    <td id="abi_1_hatu_res"></td>
+                </tr>
+                <tr>
+                    <th>アビ 2 発動率</th>
+                    <td id="abi_2_hatu_res"></td>
+                </tr>
+                <tr>
+                    <th>合計発動率</th>
+                    <td id="abi_sum_hatu_res"></td>
+                </tr>
+            </table>
         </div>
     </div>
 
-
-
+    <script src="set_equipment.js"></script>
+    <script src="abi_calc.js"></script>
     <script src="status_calc.js"></script>
     <script src="/gen2_tools/master.js"></script>
     <style>
+        #abi_hatu {
+            text-align: center;
+        }
+
+        #abi_hatu th,
+        td {
+            width: 156px;
+        }
+
         td {
             height: 30px;
         }
