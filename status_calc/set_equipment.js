@@ -28,6 +28,7 @@ fetch(url)
     .then((json) => {
         armor_data = structuredClone(json);
         input_abi()
+        calc()
     })
     .catch((error) => console.log(error))
 
