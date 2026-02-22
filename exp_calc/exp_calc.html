@@ -31,95 +31,106 @@
             </li>
         </ul>
     </div>
+    <div class="main">
+        <div id="arti">
+            <h3>
+                <div>必要経験値計算</div>
+            </h3>
+            <table border="" id="ee">
+                <tr>
+                    <th></th>
+                    <td class="input_level">
+                        <button value="30" class="set_now_level">30</button>
+                        <button value="50" class="set_now_level">50</button>
+                        <button value="100" class="set_now_level">100</button>
+                        <button value="150" class="set_now_level">150</button>
+                        <button value="200" class="set_now_level">200</button>
+                        <button value="230" class="set_now_level">230</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th>現在 Lv</td>
+                    <td class="input_level">
+                        <button value="-10" class="add_level_now">-10</button>
+                        <button value="-5" class="add_level_now">-5</button>
+                        <button value="-1" class="add_level_now">-1</button>
+                        <input id="now_level" type="number" inputmode="numeric">
+                        <button value="1" class="add_level_now">+1</button>
+                        <button value="5" class="add_level_now">+5</button>
+                        <button value="10" class="add_level_now">+10</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th>目標 Lv</td>
+                    <td class="input_level">
+                        <button value="-10" class="add_level_target">-10</button>
+                        <button value="-5" class="add_level_target">-5</button>
+                        <button value="-1" class="add_level_target">-1</button>
+                        <input id="target_level" type="number" inputmode="numeric">
+                        <button value="1" class="add_level_target">+1</button>
+                        <button value="5" class="add_level_target">+5</button>
+                        <button value="10" class="add_level_target">+10</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td class="input_level">
+                        <button value="50" class="set_level">50</button>
+                        <button value="100" class="set_level">100</button>
+                        <button value="150" class="set_level">150</button>
+                        <button value="200" class="set_level">200</button>
+                        <button value="230" class="set_level">230</button>
+                        <button value="250" class="set_level">250</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Next</td>
+                    <td>
+                        <div class="div_needExp">
+                            <input class="select_data" id="next_exp" type="number" inputmode="numeric">
+                            <span>Exp</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>転生数</td>
+                    <td>
+                        <div class="div_needExp">
+                            <select class="select_data" id="trans_num" onchange="c()">
+                                <option value="9" id="tr9">9転</option>
+                                <option value="8" id="tr8">8転</option>
+                                <option value="7" id="tr7">7転</option>
+                                <option value="6" id="tr6">6転</option>
+                                <option value="5" id="tr5">5転</option>
+                                <option value="4" id="tr4">4転</option>
+                                <option value="3" id="tr3">3転</option>
+                                <option value="2" id="tr2">2転</option>
+                                <option value="1" id="tr1">1転</option>
+                                <option value="0" id="tr0">0転</option>
+                            </select>
+                        </div>
 
-    <div id="arti">
-        <h3>
-            <div>必要経験値計算</div>
-        </h3>
-        <table border="" id="ee">
-            <tr>
-                <th></th>
-                <td class="input_level">
-                    <button value="30" class="set_now_level">30</button>
-                    <button value="50" class="set_now_level">50</button>
-                    <button value="100" class="set_now_level">100</button>
-                    <button value="150" class="set_now_level">150</button>
-                    <button value="200" class="set_now_level">200</button>
-                    <button value="230" class="set_now_level">230</button>
-                </td>
-            </tr>
-            <tr>
-                <th>現在 Lv</td>
-                <td class="input_level">
-                    <button value="-10" class="add_level_now">-10</button>
-                    <button value="-5" class="add_level_now">-5</button>
-                    <button value="-1" class="add_level_now">-1</button>
-                    <input id="now_level" type="number" inputmode="numeric">
-                    <button value="1" class="add_level_now">+1</button>
-                    <button value="5" class="add_level_now">+5</button>
-                    <button value="10" class="add_level_now">+10</button>
-                </td>
-            </tr>
-            <tr>
-                <th>目標 Lv</td>
-                <td class="input_level">
-                    <button value="-10" class="add_level_target">-10</button>
-                    <button value="-5" class="add_level_target">-5</button>
-                    <button value="-1" class="add_level_target">-1</button>
-                    <input id="target_level" type="number" inputmode="numeric">
-                    <button value="1" class="add_level_target">+1</button>
-                    <button value="5" class="add_level_target">+5</button>
-                    <button value="10" class="add_level_target">+10</button>
-                </td>
-            </tr>
-            <tr>
-                <th></th>
-                <td class="input_level">
-                    <button value="50" class="set_level">50</button>
-                    <button value="100" class="set_level">100</button>
-                    <button value="150" class="set_level">150</button>
-                    <button value="200" class="set_level">200</button>
-                    <button value="230" class="set_level">230</button>
-                    <button value="250" class="set_level">250</button>
-                </td>
-            </tr>
-            <tr>
-                <th>Next</td>
-                <td>
-                    <div class="div_needExp">
-                        <input class="select_data" id="next_exp" type="number" inputmode="numeric">
-                        <span>Exp</span>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <th>転生数</td>
-                <td>
-                    <div class="div_needExp">
-                        <select class="select_data" id="trans_num" onchange="c()">
-                            <option value="9" id="tr9">9転</option>
-                            <option value="8" id="tr8">8転</option>
-                            <option value="7" id="tr7">7転</option>
-                            <option value="6" id="tr6">6転</option>
-                            <option value="5" id="tr5">5転</option>
-                            <option value="4" id="tr4">4転</option>
-                            <option value="3" id="tr3">3転</option>
-                            <option value="2" id="tr2">2転</option>
-                            <option value="1" id="tr1">1転</option>
-                            <option value="0" id="tr0">0転</option>
-                        </select>
-                    </div>
+                    </td>
+            </table>
+            <div id="calc_Lv">
+                <button onclick="ff()">計算する !</button>
+            </div>
 
-                </td>
-        </table>
-        <div id="calc_Lv">
-            <button onclick="ff()">計算する !</button>
+            <div id="res" style="text-align: center;"></div>
+            <div id="res_2" style="text-align: center;"></div>
+            <div class="border"></div>
         </div>
-
-        <div id="res" style="text-align: center;"></div>
-        <div id="res_2" style="text-align: center;"></div>
-        <div class="border"></div>
+        <div class="arti">
+            <!-- <h3>計算機</h3>
+            <table border="">
+                <tr>
+                    <td>ss</td>
+                    <td>ss</td>
+                </tr>
+            </table> -->
+        </div>
     </div>
+
 
 
 
@@ -157,6 +168,7 @@
             width: 12%;
             padding: 4px 0px;
             margin-left: 1px;
+            margin-right: 1px;
             /* line-height: 20px; */
             font-weight: normal;
             border: 0px solid lightgray;
@@ -204,13 +216,14 @@
         .input_level input[type="number"] {
             box-sizing: border-box;
             margin-left: 2px;
-            margin-right: 1px;
+            margin-right: 2px;
             height: 30px;
         }
 
         .border {
             text-align: center;
             margin-top: 20px;
+            margin-bottom: 40px;
             border: 1px dashed grey;
         }
 
@@ -227,6 +240,17 @@
             max-width: 400px;
             width: 95%;
             background-color: aliceblue;
+        }
+
+        .arti {
+            margin: auto;
+            max-width: 400px;
+            width: 95%;
+            background-color: aliceblue;
+        }
+
+        .arti table {
+            margin: auto;
         }
 
         .div_needExp {
