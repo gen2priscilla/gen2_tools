@@ -168,7 +168,7 @@ function abi(abi_name, gen_status, grade) {
 
         //convert_L
         case "博打":
-            buf.luck = gen_status.defence + 50;
+            // buf.luck = gen_status.defence + 50;
             break;
         case "才華":
             aaaaaa = gen_status.luck * 0.5;
@@ -178,7 +178,7 @@ function abi(abi_name, gen_status, grade) {
             buf.luck = gen_status.luck - aaaaaa;
             break;
         case "浪漫":
-            buf.luck = gen_status.defence + 50;
+            // buf.luck = gen_status.defence + 50;
             break;
 
 
