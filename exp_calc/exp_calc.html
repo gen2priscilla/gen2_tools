@@ -146,14 +146,31 @@
 
         #ee .input_level {
             text-align: center;
+            font-size: 0;
         }
 
         button:is(.add_level_now, .add_level_target) {
+            display: flexbox;
             font-size: small;
             width: 10%;
-            padding: 4px 0;
-            margin-left: 0;
-            margin-right: 0;
+            padding: 4px 0px;
+            margin-left: 1px;
+            margin-right: 1px;
+            /* line-height: 20px; */
+            font-weight: normal;
+            border: 0px solid lightgray;
+            box-shadow: 0px 1px grey;
+            background-color: gainsboro;
+            border-radius: 2px;
+        }
+
+        button:is(.set_level, .set_now_level) {
+            font-size: small;
+            height: 80%;
+            width: 14%;
+            padding: 4px 1px;
+            margin-left: 1px;
+            margin-right: 1px;
             /* line-height: 20px; */
             font-weight: normal;
             border: 1px solid lightgray;
@@ -198,26 +215,7 @@
             border: 1px dashed grey;
         }
 
-        button:is(.set_level, .set_now_level) {
-            font-size: small;
-            width: 10%;
-            padding: 4px 1px;
-            margin-left: 1px;
-            margin-right: 1px;
-            /* line-height: 20px; */
-            font-weight: normal;
-            border: 1px solid lightgray;
-            box-shadow: 0px 1px grey;
-            background-color: gainsboro;
-            border-radius: 2px;
 
-            padding: 4px 1px;
-            height: 80%;
-            width: 14%;
-            text-align: center;
-            margin: 1px;
-            font-size: smaller;
-        }
 
         #atens {
             margin: auto;
