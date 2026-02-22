@@ -40,7 +40,14 @@
 
 
             <table border="1" class="status">
-
+                <tr>
+                    <th>
+                        Name
+                    </th>
+                    <td colspan="2">
+                        <input type="text" id="Name_in">
+                    </td>
+                </tr>
                 <tr>
                     <th>stamina</th>
                     <td><input id="stamina" class="input_status" type="number" inputmode="numeric" value="4000"></td>
@@ -135,13 +142,99 @@
                 </tr>
             </table>
         </div>
+
+        <div id="save">
+            <table border="">
+                <tr>
+                    <td>
+                        <button onclick="set_st()">セット</button>
+                    </td>
+                    <td>
+                        <button onclick="save_st()">保存</button>
+                    </td>
+                </tr>
+            </table>
+            <div id="save_disp">
+                <table border="">
+                    <tr>
+                        <th>Name</th>
+                        <td>
+                            <select name="q" id="sele_data">
+                                <option value="0">---</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Stamina</th>
+                        <td id="save_data_st"></td>
+                    </tr>
+                    <tr>
+                        <th>Attack</th>
+                        <td id="save_data_at"></td>
+                    </tr>
+                    <tr>
+                        <th>Defence</th>
+                        <td id="save_data_de"></td>
+                    </tr>
+                    <tr>
+                        <th>Luck</th>
+                        <td id="save_data_lu"></td>
+                    </tr>
+                    <tr>
+                        <th>武器</th>
+                        <td id="save_data_we"></td>
+                    </tr>
+                    <tr>
+                        <th>防具</th>
+                        <td id="save_data_ar"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
     </div>
 
     <script src="set_equipment.js"></script>
     <script src="abi_calc.js"></script>
     <script src="status_calc.js"></script>
+    <script src="save_st.js"></script>
     <script src="/gen2_tools/master.js"></script>
     <style>
+        #save_disp {
+            text-align: center;
+        }
+
+        #save_disp th {
+            width: 80px;
+        }
+
+        #save_data_we,
+        #save_data_ar {
+            font-size: small;
+        }
+
+        #save table {
+            width: 326px;
+            margin: 20px auto;
+        }
+
+        #save select,
+        button {
+            display: block;
+            margin: auto;
+            height: 95%;
+            width: 95%;
+            box-sizing: border-box;
+        }
+
+        #Name_in {
+            box-sizing: border-box;
+            padding-left: 5px;
+            display: block;
+            margin: auto;
+            height: 95%;
+            width: 95%;
+        }
+
         #abi_hatu {
             text-align: center;
         }
