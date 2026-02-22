@@ -2,7 +2,7 @@
     {
         "name": "なし",
         "grade": 0,
-        "base_DEF": 0,
+        "base_ATK": 0,
         "ability": "なし"
     },
     {
@@ -14,25 +14,37 @@
     {
         "name": "仁双応",
         "grade": 9,
-        "base_DEF": 220,
+        "base_ATK": 220,
         "ability": "不乱"
     },
     {
         "name": "インペリアルランス",
         "grade": 9,
-        "base_DEF": 265,
+        "base_ATK": 265,
         "ability": "猛突"
     },
     {
         "name": "エンドオブルイン",
         "grade": 9,
-        "base_DEF": 240,
+        "base_ATK": 240,
         "ability": "高揚"
     },
     {
         "name": "衝天ノ神楽鉾",
         "grade": 9,
-        "base_DEF": 250,
+        "base_ATK": 250,
         "ability": "紅舞"
+    },
+    {
+        "name": "丹青の打楽器",
+        "grade": 3,
+        "base_ATK": 5,
+        "ability": "紅舞"
+    },
+    {
+        "name": "颶風連鎖刃",
+        "grade": 10,
+        "base_ATK": 520,
+        "ability": "疾風"
     }
 ]
