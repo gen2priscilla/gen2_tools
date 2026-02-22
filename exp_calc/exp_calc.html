@@ -121,13 +121,84 @@
             <div class="border"></div>
         </div>
         <div class="arti">
-            <!-- <h3>計算機</h3>
-            <table border="">
+            <h3>計算機</h3>
+            <table border="" id="keis">
                 <tr>
-                    <td>ss</td>
-                    <td>ss</td>
+                    <th></th>
+                    <td>
+                        <input type="radio" name="ra" id="ra_1">
+                        <label for="ra_1">通常</label>
+                    </td>
+                    <td>
+                        <input type="radio" name="ra" id="ra_2">
+                        <label for="ra_2">2倍</label>
+                    </td>
+                    <td>
+                        <input type="radio" name="ra" id="ra_3">
+                        <label for="ra_3">3倍</label>
+                    </td>
                 </tr>
-            </table> -->
+                <tr>
+                    <th>Exp</th>
+                    <td colspan="3">
+                        <input id="exp_cal" type="number" inputmode="numeric">
+                    </td>
+                </tr>
+                <tr>
+                    <th>アビ 1</th>
+                    <td colspan="3" class="abi_exp">
+                        <button>
+                            なし<br>
+                            <span>( +0% )</span>
+                        </button>
+                        <button>
+                            習熟<br>
+                            <span>( +10% )</span>
+                        </button>
+                        <button>
+                            博識<br>
+                            <span>( +20% )</span>
+                        </button>
+                        <button>
+                            早熟<br>
+                            <span>( +30% )</span>
+                        </button>
+                        <button>
+                            共栄<br>
+                            <span>( +50% )</span>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <th>アビ 2</th>
+                    <td colspan="3" class="abi_exp">
+                        <button>
+                            なし<br>
+                            <span>( +0% )</span>
+                        </button>
+                        <button>
+                            習熟<br>
+                            <span>( +10% )</span>
+                        </button>
+                        <button>
+                            博識<br>
+                            <span>( +20% )</span>
+                        </button>
+                        <button>
+                            早熟<br>
+                            <span>( +30% )</span>
+                        </button>
+                        <button>
+                            共栄<br>
+                            <span>( +50% )</span>
+                        </button>
+                    </td>
+                </tr>
+            </table>
+            <div class="calc_div">
+                <button class="calc">計算する !</button>
+            </div>
+            <div id="exp_res"></div>
         </div>
     </div>
 
@@ -137,6 +208,44 @@
     <script src="exp.js"></script>
     <script src="/gen2_tools/master.js"></script>
     <style>
+        #keis th {
+            width: 60px;
+            height: 30px;
+            text-align: center;
+            font-weight: normal;
+        }
+
+        #keis td {
+            width: 100px;
+            height: 30px;
+        }
+
+        #keis td:is(.abi_exp) {
+            font-size: 0px;
+            text-align: center;
+        }
+
+
+
+        #keis button {
+            width: 19%;
+            margin: auto 1px;
+            font-size: small;
+        }
+
+        #keis span {
+            font-size: x-small;
+        }
+
+        #exp_cal {
+            box-sizing: border-box;
+            height: 28px;
+            min-width: 100px;
+
+            margin-left: 10px;
+        }
+
+
         #ee {
             margin: auto;
             width: 100%;
@@ -303,6 +412,26 @@
             box-shadow: 0px 1px grey;
             background-color: gainsboro;
             border-radius: 2px;
+        }
+
+        button:is(.calc) {
+            text-align: center;
+            font-size: medium;
+            padding: 1px 4px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            min-width: 100px;
+            min-height: 30px;
+
+
+            border: 1px solid lightgray;
+            box-shadow: 0px 1px grey;
+            background-color: gainsboro;
+            border-radius: 2px;
+        }
+
+        .calc_div {
+            text-align: center;
         }
 
         button:active:not(.hum) {
