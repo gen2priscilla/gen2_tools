@@ -113,45 +113,36 @@ function d() {
 }
 function set_color(html_element) {
     if (html_element != null) {
+        html_element.style.color = "white"
         switch (html_element.value) {
             case "9":
-                html_element.style.color = "white"
                 html_element.style.backgroundColor = "BlueViolet"
                 break;
             case "8":
-                html_element.style.color = "white"
                 html_element.style.backgroundColor = "deeppink"
                 break;
             case "7":
-                html_element.style.color = "white"
                 html_element.style.backgroundColor = "crimson"
                 break;
             case "6":
-                html_element.style.color = "black"
                 html_element.style.backgroundColor = "Coral"
                 break;
             case "5":
-                html_element.style.color = "black"
                 html_element.style.backgroundColor = "orange"
                 break;
             case "4":
-                html_element.style.color = "black"
                 html_element.style.backgroundColor = "yellow"
                 break;
             case "3":
-                html_element.style.color = "black"
                 html_element.style.backgroundColor = "LawnGreen"
                 break;
             case "2":
-                html_element.style.color = "black"
                 html_element.style.backgroundColor = "deepskyblue"
                 break;
             case "1":
-                html_element.style.color = "black"
                 html_element.style.backgroundColor = "LightSkyBlue"
                 break;
             case "0":
-                html_element.style.color = "black"
                 html_element.style.backgroundColor = "lightgrey"
                 break;
             default:
