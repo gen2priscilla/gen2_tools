@@ -28,7 +28,7 @@ h2 {
     font-weight: bold;
     text-align: center;
     color: grey;
-    paint-order: stroke;
+    paint-order: stroke fill;
     background-color: lemonchiffon;
     margin-top: 0px;
 }
