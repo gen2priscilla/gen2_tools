@@ -174,26 +174,27 @@
                 <tr>
                     <th>アビ 2</th>
                     <td colspan="3" class="abi_exp">
-                        <button>
-                            なし<br>
-                            <span>( +0% )</span>
-                        </button>
-                        <button>
-                            習熟<br>
-                            <span>( +10% )</span>
-                        </button>
-                        <button>
-                            博識<br>
-                            <span>( +20% )</span>
-                        </button>
-                        <button>
-                            早熟<br>
-                            <span>( +30% )</span>
-                        </button>
-                        <button>
-                            共栄<br>
-                            <span>( +50% )</span>
-                        </button>
+                        <label>
+                            <input class="radio_2" type="radio" name="abi_2">
+                            なし<span>( +0% )</span>
+                        </label>
+                        <label>
+                            <input class="radio_2" type="radio" name="abi_2">
+                            習熟<span>( +10% )</span>
+                        </label>
+                        <label>
+                            <input class="radio_2" type="radio" name="abi_2">
+                            博識<span>( +20% )</span>
+                        </label>
+                        <label>
+                            <input class="radio_2" type="radio" name="abi_2">
+                            早熟<span>( +30% )</span>
+                        </label>
+                        <label>
+                            <input class="radio_2" type="radio" name="abi_2">
+                            共栄<span>( +50% )</span>
+                        </label>
+
                     </td>
                 </tr>
             </table>
@@ -224,7 +225,7 @@
         }
 
         #keis td:is(.abi_exp) {
-            font-size: 0px;
+            /* font-size: 0px; */
             text-align: center;
         }
 
@@ -249,8 +250,17 @@
             font-size: x-small;
         }
 
-        .abi_exp button {
-            white-space: nowrap;
+        .abi_exp input[type="radio"] {
+            display: inline-block;
+        }
+
+        .abi_exp label {
+            display: inline-block;
+            background-color: aquamarine;
+        }
+
+        .abi_exp label:has(.radio_2:checked) {
+            background-color: aqua;
         }
 
         #exp_cal {
