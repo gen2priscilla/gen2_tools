@@ -22,7 +22,7 @@
         </ul>
     </div>
 
-    <h2>カタカナ</h2>
+    <h2>シミュ</h2>
 
     <div id="atens">
         <ul>
@@ -182,14 +182,6 @@
             border-radius: 2px;
         }
 
-        button:active:not(.hum) {
-            transform: translateY(1px);
-        }
-
-        button:hover:not(.hum) {
-            box-shadow: none;
-            transform: translateY(1px);
-        }
 
 
         #atens ul {
@@ -269,11 +261,27 @@
 
         #calc_Lv button {
             text-align: center;
+            font-size: medium;
+            padding: 1px 4px;
             margin-top: 10px;
             margin-bottom: 10px;
             min-width: 100px;
             min-height: 30px;
-            font-size: medium;
+
+
+            border: 1px solid lightgray;
+            box-shadow: 0px 1px grey;
+            background-color: gainsboro;
+            border-radius: 2px;
+        }
+
+        button:active:not(.hum) {
+            transform: translateY(1px);
+        }
+
+        button:hover:not(.hum) {
+            box-shadow: none;
+            transform: translateY(1px);
         }
     </style>
 </body>
