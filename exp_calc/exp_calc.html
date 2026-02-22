@@ -148,12 +148,12 @@
             text-align: center;
         }
 
-        button:not(.hum) {
+        button:is(.add_level_now, .add_level_target) {
             font-size: small;
             width: 10%;
-            padding: 4px 1px;
-            margin-left: 1px;
-            margin-right: 1px;
+            padding: 4px 0;
+            margin-left: 0;
+            margin-right: 0;
             /* line-height: 20px; */
             font-weight: normal;
             border: 1px solid lightgray;
@@ -199,6 +199,18 @@
         }
 
         button:is(.set_level, .set_now_level) {
+            font-size: small;
+            width: 10%;
+            padding: 4px 1px;
+            margin-left: 1px;
+            margin-right: 1px;
+            /* line-height: 20px; */
+            font-weight: normal;
+            border: 1px solid lightgray;
+            box-shadow: 0px 1px grey;
+            background-color: gainsboro;
+            border-radius: 2px;
+
             padding: 4px 1px;
             height: 80%;
             width: 14%;
