@@ -37,6 +37,7 @@ function calc() {
 
     abi_hatu_(res.luck)
 }
+
 function ddd() {
 
     let d = document.getElementById("armor").value
