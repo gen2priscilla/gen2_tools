@@ -131,18 +131,22 @@ function set_color(html_element) {
                 html_element.style.backgroundColor = "orange"
                 break;
             case "4":
+                html_element.style.color = "black"
                 html_element.style.backgroundColor = "yellow"
                 break;
             case "3":
+                html_element.style.color = "black"
                 html_element.style.backgroundColor = "LawnGreen"
                 break;
             case "2":
                 html_element.style.backgroundColor = "deepskyblue"
                 break;
             case "1":
+                html_element.style.color = "black"
                 html_element.style.backgroundColor = "LightSkyBlue"
                 break;
             case "0":
+                html_element.style.color = "black"
                 html_element.style.backgroundColor = "lightgrey"
                 break;
             default:
