@@ -1,11 +1,5 @@
 [
     {
-        "name": "なし",
-        "grade": 0,
-        "base_ATK": 0,
-        "ability": "なし"
-    },
-    {
         "name": "デス・サイズ",
         "grade": 7,
         "base_ATK": 130,
@@ -46,5 +40,239 @@
         "grade": 10,
         "base_ATK": 520,
         "ability": "疾風"
+    },
+    {
+        "name": "ギガントマキア",
+        "grade": 10,
+        "base_ATK": 450,
+        "ability": "粉砕"
+    },
+    {
+        "name": "天啓の聖鐘",
+        "grade": 10,
+        "base_ATK": 120,
+        "ability": "福音"
+    },
+    {
+        "name": "照吉丸",
+        "grade": 10,
+        "base_ATK": 80,
+        "ability": "天晴"
+    },
+    {
+        "name": "朧蒼月",
+        "grade": 10,
+        "base_ATK": 500,
+        "ability": "壮健"
+    },
+    {
+        "name": "プリマステラ",
+        "grade": 10,
+        "base_ATK": 120,
+        "ability": "爽活"
+    },
+    {
+        "name": "アストラル・スフィア",
+        "grade": 10,
+        "base_ATK": 650,
+        "ability": "和属"
+    },
+    {
+        "name": "精霊の弓矢",
+        "grade": 9,
+        "base_ATK": 240,
+        "ability": "突風"
+    },
+    {
+        "name": "レーヴァテイン『戒』",
+        "grade": 9,
+        "base_ATK": 240,
+        "ability": "大撃"
+    },
+    {
+        "name": "アルマース",
+        "grade": 9,
+        "base_ATK": 210,
+        "ability": "粉砕"
+    },
+    {
+        "name": "バルムンク",
+        "grade": 9,
+        "base_ATK": 190,
+        "ability": "地属攻"
+    },
+    {
+        "name": "布都御魂",
+        "grade": 9,
+        "base_ATK": 210,
+        "ability": "一斉"
+    },
+    {
+        "name": "轟天の大槍",
+        "grade": 9,
+        "base_ATK": 200,
+        "ability": "壮健"
+    },
+    {
+        "name": "陸志の結扇",
+        "grade": 9,
+        "base_ATK": 180,
+        "ability": "和属"
+    },
+    {
+        "name": "天巴之御佩刀",
+        "grade": 9,
+        "base_ATK": 310,
+        "ability": "不乱"
+    },
+    {
+        "name": "弓生矢",
+        "grade": 9,
+        "base_ATK": 190,
+        "ability": "無属攻"
+    },
+    {
+        "name": "鴉扇",
+        "grade": 8,
+        "base_ATK": 170,
+        "ability": "突風"
+    },
+    {
+        "name": "バルゴの祝福",
+        "grade": 8,
+        "base_ATK": 175,
+        "ability": "癒唄"
+    },
+    {
+        "name": "獅子砕牙",
+        "grade": 8,
+        "base_ATK": 185,
+        "ability": "獣属攻"
+    },
+    {
+        "name": "ケリュケイオン",
+        "grade": 8,
+        "base_ATK": 185,
+        "ability": "魔属攻"
+    },
+    {
+        "name": "竜族の紋章",
+        "grade": 8,
+        "base_ATK": 185,
+        "ability": "龍属攻"
+    },
+    {
+        "name": "火ノ迦具土",
+        "grade": 8,
+        "base_ATK": 160,
+        "ability": "一斉"
+    },
+    {
+        "name": "レーヴァテイン",
+        "grade": 8,
+        "base_ATK": 220,
+        "ability": "霊属攻"
+    },
+    {
+        "name": "金剛双刃",
+        "grade": 8,
+        "base_ATK": 200,
+        "ability": "高揚"
+    },
+    {
+        "name": "斬魔刀",
+        "grade": 8,
+        "base_ATK": 200,
+        "ability": "高揚"
+    },
+    {
+        "name": "エヴィルサイズ",
+        "grade": 8,
+        "base_ATK": 190,
+        "ability": "大撃"
+    },
+    {
+        "name": "エクスカリバー",
+        "grade": 7,
+        "base_ATK": 160,
+        "ability": "なし"
+    },
+    {
+        "name": "コランダム",
+        "grade": 7,
+        "base_ATK": 160,
+        "ability": "粉砕"
+    },
+    {
+        "name": "都牟刈大刀",
+        "grade": 7,
+        "base_ATK": 160,
+        "ability": "五雨"
+    },
+    {
+        "name": "リリジェンアーク",
+        "grade": 7,
+        "base_ATK": 190,
+        "ability": "高揚"
+    },
+    {
+        "name": "ゴールドソード",
+        "grade": 7,
+        "base_ATK": 1,
+        "ability": "大撃"
+    },
+    {
+        "name": "荒ぶるターキー",
+        "grade": 7,
+        "base_ATK": 160,
+        "ability": "強打"
+    },
+    {
+        "name": "桜吹雪",
+        "grade": 7,
+        "base_ATK": 150,
+        "ability": "突風"
+    },
+    {
+        "name": "懐旧の記録盤",
+        "grade": 7,
+        "base_ATK": 120,
+        "ability": "大撃"
+    },
+    {
+        "name": "旋律の弦楽器",
+        "grade": 7,
+        "base_ATK": 120,
+        "ability": "一斉"
+    },
+    {
+        "name": "脈打つ打楽器",
+        "grade": 7,
+        "base_ATK": 120,
+        "ability": "高揚"
+    },
+    {
+        "name": "壮烈な管楽器",
+        "grade": 7,
+        "base_ATK": 120,
+        "ability": "五雨"
+    },
+    {
+        "name": "思い出の管楽器",
+        "grade": 7,
+        "base_ATK": 120,
+        "ability": "猛突"
+    },
+    {
+        "name": "フルールロッド",
+        "grade": 7,
+        "base_ATK": 120,
+        "ability": "爽活"
+    },
+    {
+        "name": "天響の尖槍",
+        "grade": 7,
+        "base_ATK": 120,
+        "ability": "盟旗"
     }
 ]
