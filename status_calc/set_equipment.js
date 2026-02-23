@@ -45,52 +45,102 @@ function input_abi_() {
 //武器を target_id にセット
 function set_weapon(target_id) {
     let weapon_order = {
-        "cat 1": ["紅舞", "粉砕", "高揚", "盟旗"],
+        "cat 1": ["紅舞", "粉砕", "高揚"],
         "cat 2": ["壮健", "不乱", "大撃"],
-        "cat 3": ["疾風", "猛突", "突風"],
-        "cat 4": ["和属", "一斉",],
-        "回復": ["天晴", "福音", "爽活", "癒唄", "回復",],
+        "cat 3": ["疾風", "猛突"],
+        "cat 4": ["和属", "一斉", "盟旗"],
+        "cat 5": ["天晴", "福音", "爽活"],
         "属性": ["獣属", "魔属", "霊属", "龍属", "地属", "無属"],
-        "その他": ["強打", "凍結", "五雨", "砕返", "風返", "破茶", "なし"]
+        "その他": ["強打", "凍結", "五雨", "突風", "癒唄", "回復",
+            "砕返", "風返", "破茶", "なし"]
     }
+    let opt_G = ["cat 1", "cat 2", "cat 3", "cat 4", "cat 5", "属性", "その他"]
+    let weapon_exsept = ["日本刀", "デス・サイズ"]
+    let abi_exsept = ["紅舞", "福音", "爽活", "", ""]
+
     let _el_ar = document.getElementById(target_id)
 
-    Object.entries(weapon_order).forEach(([key, val]) => {
+
+    opt_G.forEach(val => {
 
         let created_el = document.createElement("optgroup")
-        created_el.label = key
-        created_el.id = `weapon_${key}`
-
+        created_el.label = val
+        created_el.id = `weapon_${val}`
         _el_ar.appendChild(created_el)
 
-        let a = document.getElementById(created_el.id)
+    })
+    // let ad = Object.entries(weapon_order).find(([key, val]) => {
+    //     val.forEach(ek=>{
+    //         e
+    //     })
+    // })
 
-        val.forEach(element => {
-            weapon_data.forEach(val => {
-                if (element == val["ability"]) {
+    let f = performance.now()
+
+    let i = 0
+    weapon_data.forEach(data => {
+        let weapon_option = document.createElement("option")
+
+        // console.log(Object.values(weapon_order))
+
+        Object.entries(weapon_order).forEach(([key, val]) => {
+            // console.log("dd")
+            // let flag = false
+            // if (abi_exsept.includes(data.ability)) {
+
+            //     flag = true
+            // } else if (weapon_exsept.includes(data.name)) {
+
+            //     flag = true
+            // } else {
+
+            val.forEach(ff => {
+
+                if (data["ability"] == ff) {
                     let weapon_option = document.createElement("option")
-                    weapon_option.value = val["name"]
-                    weapon_option.textContent = `${val["ability"]} : ${val["name"]}`
+                    weapon_option.value = data["name"]
+                    weapon_option.textContent = `${data["ability"]} : ${data["name"]}`
 
+                    let a = document.getElementById(`weapon_${key}`)
                     a.appendChild(weapon_option)
                 }
-
             })
+
+
+
+            // if (flag) {
+
+            //     // console.log(key)
+            //     // i++
+            //     // console.log(i)
+            //     weapon_option.value = data["name"]
+            //     weapon_option.textContent = `${data["ability"]} : ${data["name"]}`
+            //     let a = document.getElementById(`weapon_${key}`)
+            //     a.appendChild(weapon_option)
+            // }
         })
+
+
+
     })
+
+    let ff = performance.now()
+    console.log(f + " : " + ff + " : " + (ff - f))
 }
+
 
 //武器アビリティを target_id にセット
 function set_weapon_abi(target_id) {
 
     let ability_name = {
-        "cat 1": ["紅舞", "粉砕", "高揚", "盟旗"],
+        "cat 1": ["紅舞", "粉砕", "高揚"],
         "cat 2": ["壮健", "不乱", "大撃"],
-        "cat 3": ["疾風", "猛突", "突風"],
-        "cat 4": ["和属", "一斉",],
-        "回復": ["天晴", "福音", "爽活", "癒唄", "回復",],
+        "cat 3": ["疾風", "猛突"],
+        "cat 4": ["和属", "一斉", "盟旗"],
+        "cat 5": ["天晴", "福音", "爽活"],
         "属性": ["獣属", "魔属", "霊属", "龍属", "地属", "無属"],
-        "その他": ["強打", "凍結", "五雨", "砕返", "風返", "破茶", "なし"]
+        "その他": ["強打", "凍結", "五雨", "突風", "癒唄", "回復",
+            "砕返", "風返", "破茶", "なし"]
     }
 
     let a = document.getElementById(target_id)
