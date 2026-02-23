@@ -1,5 +1,11 @@
 [
     {
+        "name": "なし",
+        "grade": 0,
+        "base_ATK": 0,
+        "ability": "なし"
+    },
+    {
         "name": "デス・サイズ",
         "grade": 7,
         "base_ATK": 130,
