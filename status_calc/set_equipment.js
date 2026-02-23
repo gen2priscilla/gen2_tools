@@ -50,13 +50,13 @@ function set_weapon(target_id) {
         "cat 3": ["疾風", "猛突"],
         "cat 4": ["和属", "一斉", "盟旗"],
         "cat 5": ["天晴", "福音", "爽活"],
-        "属性": ["獣属", "魔属", "霊属", "龍属", "地属", "無属"],
+        "属性": ["獣属攻", "魔属攻", "霊属攻", "龍属攻", "地属攻", "無属攻"],
         "その他": ["強打", "凍結", "五雨", "突風", "癒唄", "回復",
             "砕返", "風返", "破茶", "なし"]
     }
 
-    let weapon_exsept = ["日本刀", "デス・サイズ"]
-    let abi_exsept = ["紅舞", "福音", "爽活", "", ""]
+    let weapon_exsept = ["日本刀", "デス・サイズ", "天響の尖槍", "コランダム"]
+    let abi_exsept = ["紅舞", "福音", "爽活", ""]
 
     let _el_ar = document.getElementById(target_id)
 
@@ -77,11 +77,20 @@ function set_weapon(target_id) {
 
             weapon_data.forEach(eleme => {
                 if (eleme.ability == element) {
+                    let lab = ""
                     let weapon_option = document.createElement("option")
                     weapon_option.value = eleme["name"]
                     weapon_option.textContent = `${eleme["ability"]} : ${eleme["name"]}`
 
-                    let a = document.getElementById(`weapon_${key}`)
+                    if (8 < eleme.grade || key == "属性") {
+                        lab = key
+                    } else if (weapon_exsept.includes(eleme.name) || abi_exsept.includes(eleme.ability)) {
+                        // console.log(eleme.name)
+                        lab = key
+                    } else {
+                        lab = "その他"
+                    }
+                    let a = document.getElementById(`weapon_${lab}`)
                     a.appendChild(weapon_option)
                 }
             })
