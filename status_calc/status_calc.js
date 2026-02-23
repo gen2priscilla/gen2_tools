@@ -1,4 +1,19 @@
+function f(a, b, c, d) {
+    localStorage.setItem("st", a)
+    localStorage.setItem("at", b)
+    localStorage.setItem("df", c)
+    localStorage.setItem("lu", d)
+}
+function d() {
+    let f = new Object
+    f.st = localStorage.getItem("st")
+    f.at = localStorage.getItem("at")
+    f.df = localStorage.getItem("df")
+    f.lu = localStorage.getItem("lu")
+    console.log(f)
+}
 
+// d()
 //ステータスの計算
 function calc() {
 
@@ -36,8 +51,10 @@ function calc() {
     q8.textContent = res.luck
 
     abi_hatu_(res.luck)
-}
+    // f(q1.value, q3.value, q5.value, q7.value)
 
+}
+localStorage.clear()
 function ddd() {
 
     let d = document.getElementById("armor").value
@@ -76,9 +93,9 @@ function aaa_() {
 
 function abi_hatu_(luck) {
     let hatu = {
-        "高": ["高揚", "強打", "風返", "回復", 
+        "高": ["高揚", "強打", "回復",
             "獣属攻", "魔属攻", "霊属攻", "龍属攻", "地属攻", "無属攻"],
-        "中": ["盟旗", "猛突", "凍結", "五雨", "突風", "破茶", "砕返"],
+        "中": ["盟旗", "猛突", "凍結", "五雨", "突風", "破茶"],
         "低": ["疾風 ", "壮健", "不乱", "大撃", "紅舞", "粉砕",
             "一斉", "福音", "爽活", "癒唄", "和属"],
         "超低": ["天晴"],
