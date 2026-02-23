@@ -6,42 +6,6 @@
         "ability": "---"
     },
     {
-        "name": "デス・サイズ",
-        "grade": 7,
-        "base_ATK": 130,
-        "ability": "大撃"
-    },
-    {
-        "name": "仁双応",
-        "grade": 9,
-        "base_ATK": 220,
-        "ability": "不乱"
-    },
-    {
-        "name": "インペリアルランス",
-        "grade": 9,
-        "base_ATK": 265,
-        "ability": "猛突"
-    },
-    {
-        "name": "エンドオブルイン",
-        "grade": 9,
-        "base_ATK": 240,
-        "ability": "高揚"
-    },
-    {
-        "name": "衝天ノ神楽鉾",
-        "grade": 9,
-        "base_ATK": 250,
-        "ability": "紅舞"
-    },
-    {
-        "name": "丹青の打楽器",
-        "grade": 3,
-        "base_ATK": 5,
-        "ability": "紅舞"
-    },
-    {
         "name": "颶風連鎖刃",
         "grade": 10,
         "base_ATK": 520,
@@ -84,6 +48,30 @@
         "ability": "和属"
     },
     {
+        "name": "仁双応",
+        "grade": 9,
+        "base_ATK": 220,
+        "ability": "不乱"
+    },
+    {
+        "name": "インペリアルランス",
+        "grade": 9,
+        "base_ATK": 265,
+        "ability": "猛突"
+    },
+    {
+        "name": "エンドオブルイン",
+        "grade": 9,
+        "base_ATK": 240,
+        "ability": "高揚"
+    },
+    {
+        "name": "衝天ノ神楽鉾",
+        "grade": 9,
+        "base_ATK": 250,
+        "ability": "紅舞"
+    },
+    {
         "name": "精霊の弓矢",
         "grade": 9,
         "base_ATK": 240,
@@ -111,12 +99,6 @@
         "name": "布都御魂",
         "grade": 9,
         "base_ATK": 210,
-        "ability": "一斉"
-    },
-    {
-        "name": "日本刀",
-        "grade": 5,
-        "base_ATK": 80,
         "ability": "一斉"
     },
     {
@@ -204,6 +186,12 @@
         "ability": "大撃"
     },
     {
+        "name": "デス・サイズ",
+        "grade": 7,
+        "base_ATK": 130,
+        "ability": "大撃"
+    },
+    {
         "name": "エクスカリバー",
         "grade": 7,
         "base_ATK": 160,
@@ -286,5 +274,17 @@
         "grade": 7,
         "base_ATK": 120,
         "ability": "盟旗"
+    },
+    {
+        "name": "日本刀",
+        "grade": 5,
+        "base_ATK": 80,
+        "ability": "一斉"
+    },
+    {
+        "name": "丹青の打楽器",
+        "grade": 3,
+        "base_ATK": 5,
+        "ability": "紅舞"
     }
 ]
