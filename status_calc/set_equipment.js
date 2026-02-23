@@ -45,7 +45,7 @@ function input_abi_() {
 //武器を target_id にセット
 function set_weapon(target_id) {
     let weapon_order = {
-        "cat 1": ["紅舞", "粉砕", "高揚"],
+        "cat 1": ["紅舞", "高揚", "粉砕"],
         "cat 2": ["壮健", "不乱", "大撃"],
         "cat 3": ["疾風", "猛突"],
         "cat 4": ["和属", "一斉", "盟旗"],
@@ -110,7 +110,7 @@ function set_weapon(target_id) {
 function set_weapon_abi(target_id) {
 
     let ability_name = {
-        "cat 1": ["紅舞", "粉砕", "高揚"],
+        "cat 1": ["紅舞", "高揚", "粉砕"],
         "cat 2": ["壮健", "不乱", "大撃"],
         "cat 3": ["疾風", "猛突"],
         "cat 4": ["和属", "一斉", "盟旗"],
