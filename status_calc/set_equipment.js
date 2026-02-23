@@ -68,27 +68,28 @@ function set_weapon(target_id) {
     })
 
     let f = performance.now()
-
-    weapon_data.forEach(data => {
-        let weapon_option = document.createElement("option")
+    // console.log(weapon_data)
 
 
-        Object.entries(weapon_order).forEach(([key, val]) => {
+    Object.entries(weapon_order).forEach(([key, val]) => {
+        val.forEach(element => {
+            // let d = performance.now()
 
-            val.forEach(ff => {
-
-                if (data["ability"] == ff) {
+            weapon_data.forEach(eleme => {
+                if (eleme.ability == element) {
                     let weapon_option = document.createElement("option")
-                    weapon_option.value = data["name"]
-                    weapon_option.textContent = `${data["ability"]} : ${data["name"]}`
+                    weapon_option.value = eleme["name"]
+                    weapon_option.textContent = `${eleme["ability"]} : ${eleme["name"]}`
 
                     let a = document.getElementById(`weapon_${key}`)
                     a.appendChild(weapon_option)
                 }
             })
 
+            // console.log(qw)
+            // let dd = performance.now()
+            // console.log(d + " : " + dd + " : " + (dd - d))
         })
-
     })
 
     let ff = performance.now()
