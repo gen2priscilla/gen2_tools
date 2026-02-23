@@ -3,7 +3,7 @@
         "name": "なし",
         "grade": 0,
         "base_ATK": 0,
-        "ability": "なし"
+        "ability": "---"
     },
     {
         "name": "デス・サイズ",
@@ -111,6 +111,12 @@
         "name": "布都御魂",
         "grade": 9,
         "base_ATK": 210,
+        "ability": "一斉"
+    },
+    {
+        "name": "日本刀",
+        "grade": 5,
+        "base_ATK": 80,
         "ability": "一斉"
     },
     {
