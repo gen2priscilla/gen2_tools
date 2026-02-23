@@ -4,6 +4,8 @@ const url_ = "/gen2_tools/data/weapon_list.json"
 const url = "/gen2_tools/data/armor_list.json"
 let armor_data = new Array
 let weapon_data = new Array
+let __fi = 0
+let __go = 0
 fetch(url_)
     .then((response) => {
         if (!response.ok) {
@@ -13,24 +15,34 @@ fetch(url_)
         return response.json();
     })
     .then((json) => {
+
         weapon_data = structuredClone(json);
         input_abi_()
+        __fi = performance.now()
     })
     .catch((error) => console.log(error))
-fetch(url)
-    .then((response) => {
-        if (!response.ok) {
-            throw new Error("Network response was not ok.");
-            // Errorが発生したら、ここで処理を中断して、下記のcatchに移行する
-        }
-        return response.json();
+    .then(() => {
+        fetch(url)
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error("Network response was not ok.");
+                    // Errorが発生したら、ここで処理を中断して、下記のcatchに移行する
+                }
+                return response.json();
+            })
+            .then((json) => {
+                __go = performance.now()
+                console.log("log : " + __fi + " : " + __go + " : " + (__go - __fi))
+                armor_data = structuredClone(json);
+                input_abi()
+                calc()
+
+
+            })
+            .catch((error) => console.log(error))
     })
-    .then((json) => {
-        armor_data = structuredClone(json);
-        input_abi()
-        calc()
-    })
-    .catch((error) => console.log(error))
+
+
 
 //実際にセット
 function input_abi() {
@@ -45,14 +57,14 @@ function input_abi_() {
 //武器を target_id にセット
 function set_weapon(target_id) {
     let weapon_order = {
-        "cat 1": ["紅舞", "高揚", "粉砕"],
+        "cat 1": ["紅舞", "粉砕", "高揚"],
         "cat 2": ["壮健", "不乱", "大撃"],
         "cat 3": ["疾風", "猛突"],
         "cat 4": ["和属", "一斉", "盟旗"],
         "cat 5": ["天晴", "福音", "爽活"],
         "属性": ["獣属攻", "魔属攻", "霊属攻", "龍属攻", "地属攻", "無属攻"],
-        "その他": ["強打", "凍結", "五雨", "突風", "癒唄", "回復",
-            "砕返", "風返", "破茶", "なし"]
+        "その他": ["強打", "凍結", "五雨", "突風",
+            "癒唄", "回復", "破茶", "なし"]
     }
 
     let weapon_exsept = ["日本刀", "デス・サイズ", "天響の尖槍", "コランダム"]
@@ -110,14 +122,14 @@ function set_weapon(target_id) {
 function set_weapon_abi(target_id) {
 
     let ability_name = {
-        "cat 1": ["紅舞", "高揚", "粉砕"],
+        "cat 1": ["紅舞", "粉砕", "高揚"],
         "cat 2": ["壮健", "不乱", "大撃"],
         "cat 3": ["疾風", "猛突"],
         "cat 4": ["和属", "一斉", "盟旗"],
         "cat 5": ["天晴", "福音", "爽活"],
-        "属性": ["獣属攻", "魔属攻", "霊属攻", "龍属攻", "地属攻", "無属攻"],
-        "その他": ["強打", "凍結", "五雨", "突風", "癒唄", "回復",
-            "砕返", "風返", "破茶", "なし"]
+        "属性": ["獣属", "魔属", "霊属", "龍属", "地属", "無属"],
+        "その他": ["強打", "凍結", "五雨", "突風",
+            "癒唄", "回復", "破茶", "なし"]
     }
 
     let a = document.getElementById(target_id)
