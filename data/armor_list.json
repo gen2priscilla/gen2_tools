@@ -6,6 +6,60 @@
         "ability": "なし"
     },
     {
+        "name": "蚩尤ノ冥煌鎧",
+        "grade": 10,
+        "base_DEF": 245,
+        "ability": "猛皇"
+    },
+    {
+        "name": "天導の司教冠",
+        "grade": 10,
+        "base_DEF": 230,
+        "ability": "威風"
+    },
+    {
+        "name": "フェアリアルヒール",
+        "grade": 10,
+        "base_DEF": 230,
+        "ability": "慈恵"
+    },
+    {
+        "name": "綺羅羊の頭巾",
+        "grade": 10,
+        "base_DEF": 460,
+        "ability": "賢皇"
+    },
+    {
+        "name": "瞋恚ノ鬼面",
+        "grade": 10,
+        "base_DEF": 230,
+        "ability": "砕身"
+    },
+    {
+        "name": "プロジェクトΨ",
+        "grade": 10,
+        "base_DEF": 230,
+        "ability": "改命"
+    },
+    {
+        "name": "鏖魔瞳",
+        "grade": 10,
+        "base_DEF": 500,
+        "ability": "修羅"
+    },
+    {
+        "name": "シバルリーエンブレム",
+        "grade": 10,
+        "base_DEF": 450,
+        "ability": "一八"
+    },
+    {
+        "name": "ジャック・ディーラー",
+        "grade": 10,
+        "base_DEF": 245,
+        "ability": "博打"
+    },
+    {
         "name": "月輪麗明",
         "grade": 9,
         "base_DEF": 500,
@@ -16,12 +70,6 @@
         "grade": 9,
         "base_DEF": 230,
         "ability": "勇将"
-    },
-    {
-        "name": "龍乗の修気",
-        "grade": 6,
-        "base_DEF": 210,
-        "ability": "雲竜"
     },
     {
         "name": "万斛の響鼓",
@@ -36,34 +84,10 @@
         "ability": "誘惑"
     },
     {
-        "name": "十二単",
-        "grade": 7,
-        "base_DEF": 120,
-        "ability": "誘惑"
-    },
-    {
-        "name": "常夏ビキニ",
-        "grade": 6,
-        "base_DEF": 90,
-        "ability": "誘惑"
-    },
-    {
-        "name": "蚩尤ノ冥煌鎧",
-        "grade": 10,
-        "base_DEF": 245,
-        "ability": "猛皇"
-    },
-    {
         "name": "飛将の武冠",
         "grade": 9,
         "base_DEF": 35,
         "ability": "猛将"
-    },
-    {
-        "name": "虎乗の覇気",
-        "grade": 6,
-        "base_DEF": 10,
-        "ability": "虎咆"
     },
     {
         "name": "ネメアーの獅子冠",
@@ -72,70 +96,10 @@
         "ability": "闘争"
     },
     {
-        "name": "豪傑の下駄",
-        "grade": 7,
-        "base_DEF": 15,
-        "ability": "闘争"
-    },
-    {
-        "name": "赤白帽",
-        "grade": 7,
-        "base_DEF": 5,
-        "ability": "闘争"
-    },
-    {
-        "name": "天導の司教冠",
-        "grade": 10,
-        "base_DEF": 230,
-        "ability": "威風"
-    },
-    {
-        "name": "オブリビオン",
-        "grade": 8,
-        "base_DEF": 180,
-        "ability": "戦略"
-    },
-    {
-        "name": "エントレンジ",
-        "grade": 5,
-        "base_DEF": 70,
-        "ability": "戦略"
-    },
-    {
-        "name": "フェアリアルヒール",
-        "grade": 10,
-        "base_DEF": 230,
-        "ability": "慈恵"
-    },
-    {
-        "name": "硝子の靴",
-        "grade": 8,
-        "base_DEF": 185,
-        "ability": "遊戯"
-    },
-    {
-        "name": "氷滑の履物",
-        "grade": 5,
-        "base_DEF": 70,
-        "ability": "遊戯"
-    },
-    {
-        "name": "綺羅羊の頭巾",
-        "grade": 10,
-        "base_DEF": 460,
-        "ability": "賢皇"
-    },
-    {
         "name": "創世の護翼",
         "grade": 9,
         "base_DEF": 310,
         "ability": "賢将"
-    },
-    {
-        "name": "鶴乗の練気",
-        "grade": 6,
-        "base_DEF": 290,
-        "ability": "護鶴"
     },
     {
         "name": "不滅の炎翼",
@@ -144,58 +108,10 @@
         "ability": "防衛"
     },
     {
-        "name": "蒼竜の翼",
-        "grade": 7,
-        "base_DEF": 40,
-        "ability": "防衛"
-    },
-    {
-        "name": "瞋恚ノ鬼面",
-        "grade": 10,
-        "base_DEF": 230,
-        "ability": "砕身"
-    },
-    {
         "name": "マッドハット",
         "grade": 9,
         "base_DEF": 220,
         "ability": "悪戯"
-    },
-    {
-        "name": "オブマスカレード",
-        "grade": 7,
-        "base_DEF": 120,
-        "ability": "悪戯"
-    },
-    {
-        "name": "妖狐ノ尾",
-        "grade": 4,
-        "base_DEF": 80,
-        "ability": "悪戯"
-    },
-    {
-        "name": "プロジェクトΨ",
-        "grade": 10,
-        "base_DEF": 230,
-        "ability": "改命"
-    },
-    {
-        "name": "プロジェクトΩ",
-        "grade": 8,
-        "base_DEF": 180,
-        "ability": "瞑想"
-    },
-    {
-        "name": "プロジェクトΛ",
-        "grade": 6,
-        "base_DEF": 110,
-        "ability": "瞑想"
-    },
-    {
-        "name": "鏖魔瞳",
-        "grade": 10,
-        "base_DEF": 500,
-        "ability": "修羅"
     },
     {
         "name": "青藍の巫女服",
@@ -204,46 +120,10 @@
         "ability": "覇王"
     },
     {
-        "name": "戦覇の勲章",
-        "grade": 5,
-        "base_DEF": 10,
-        "ability": "覇王"
-    },
-    {
-        "name": "邪封じの眼帯",
-        "grade": 6,
-        "base_DEF": 40,
-        "ability": "覇王"
-    },
-    {
-        "name": "シバルリーエンブレム",
-        "grade": 10,
-        "base_DEF": 450,
-        "ability": "一八"
-    },
-    {
         "name": "竜騎の兜",
         "grade": 9,
         "base_DEF": 250,
         "ability": "天佑"
-    },
-    {
-        "name": "神楽鈴",
-        "grade": 7,
-        "base_DEF": 130,
-        "ability": "天佑"
-    },
-    {
-        "name": "風雅烏帽子",
-        "grade": 7,
-        "base_DEF": 120,
-        "ability": "加護"
-    },
-    {
-        "name": "栄光の歩み",
-        "grade": 2,
-        "base_DEF": 15,
-        "ability": "加護"
     },
     {
         "name": "英明の戦衣",
@@ -252,10 +132,22 @@
         "ability": "大帝"
     },
     {
-        "name": "ジャック・ディーラー",
-        "grade": 10,
-        "base_DEF": 245,
-        "ability": "博打"
+        "name": "オブリビオン",
+        "grade": 8,
+        "base_DEF": 180,
+        "ability": "戦略"
+    },
+    {
+        "name": "硝子の靴",
+        "grade": 8,
+        "base_DEF": 185,
+        "ability": "遊戯"
+    },
+    {
+        "name": "プロジェクトΩ",
+        "grade": 8,
+        "base_DEF": 180,
+        "ability": "瞑想"
     },
     {
         "name": "奇術師のモノクル",
@@ -267,12 +159,6 @@
         "name": "番傘",
         "grade": 8,
         "base_DEF": 110,
-        "ability": "浪漫"
-    },
-    {
-        "name": "丁半賽",
-        "grade": 5,
-        "base_DEF": 61,
         "ability": "浪漫"
     },
     {
@@ -292,5 +178,119 @@
         "grade": 8,
         "base_DEF": 175,
         "ability": "底力"
+    },
+    {
+        "name": "十二単",
+        "grade": 7,
+        "base_DEF": 120,
+        "ability": "誘惑"
+    },
+    {
+        "name": "豪傑の下駄",
+        "grade": 7,
+        "base_DEF": 15,
+        "ability": "闘争"
+    },
+    {
+        "name": "赤白帽",
+        "grade": 7,
+        "base_DEF": 5,
+        "ability": "闘争"
+    },
+    {
+        "name": "蒼竜の翼",
+        "grade": 7,
+        "base_DEF": 40,
+        "ability": "防衛"
+    },
+    {
+        "name": "オブマスカレード",
+        "grade": 7,
+        "base_DEF": 120,
+        "ability": "悪戯"
+    },
+    {
+        "name": "神楽鈴",
+        "grade": 7,
+        "base_DEF": 130,
+        "ability": "天佑"
+    },
+    {
+        "name": "風雅烏帽子",
+        "grade": 7,
+        "base_DEF": 120,
+        "ability": "加護"
+    },
+    {
+        "name": "龍乗の修気",
+        "grade": 6,
+        "base_DEF": 210,
+        "ability": "雲竜"
+    },
+    {
+        "name": "常夏ビキニ",
+        "grade": 6,
+        "base_DEF": 90,
+        "ability": "誘惑"
+    },
+    {
+        "name": "虎乗の覇気",
+        "grade": 6,
+        "base_DEF": 10,
+        "ability": "虎咆"
+    },
+    {
+        "name": "鶴乗の練気",
+        "grade": 6,
+        "base_DEF": 290,
+        "ability": "護鶴"
+    },
+    {
+        "name": "プロジェクトΛ",
+        "grade": 6,
+        "base_DEF": 110,
+        "ability": "瞑想"
+    },
+    {
+        "name": "邪封じの眼帯",
+        "grade": 6,
+        "base_DEF": 40,
+        "ability": "覇王"
+    },
+    {
+        "name": "エントレンジ",
+        "grade": 5,
+        "base_DEF": 70,
+        "ability": "戦略"
+    },
+    {
+        "name": "氷滑の履物",
+        "grade": 5,
+        "base_DEF": 70,
+        "ability": "遊戯"
+    },
+    {
+        "name": "戦覇の勲章",
+        "grade": 5,
+        "base_DEF": 10,
+        "ability": "覇王"
+    },
+    {
+        "name": "丁半賽",
+        "grade": 5,
+        "base_DEF": 61,
+        "ability": "浪漫"
+    },
+    {
+        "name": "妖狐ノ尾",
+        "grade": 4,
+        "base_DEF": 80,
+        "ability": "悪戯"
+    },
+    {
+        "name": "栄光の歩み",
+        "grade": 2,
+        "base_DEF": 15,
+        "ability": "加護"
     }
 ]
