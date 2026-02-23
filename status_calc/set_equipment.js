@@ -54,45 +54,26 @@ function set_weapon(target_id) {
         "その他": ["強打", "凍結", "五雨", "突風", "癒唄", "回復",
             "砕返", "風返", "破茶", "なし"]
     }
-    let opt_G = ["cat 1", "cat 2", "cat 3", "cat 4", "cat 5", "属性", "その他"]
+
     let weapon_exsept = ["日本刀", "デス・サイズ"]
     let abi_exsept = ["紅舞", "福音", "爽活", "", ""]
 
     let _el_ar = document.getElementById(target_id)
 
-
-    opt_G.forEach(val => {
-
+    Object.keys(weapon_order).forEach(key => {
         let created_el = document.createElement("optgroup")
-        created_el.label = val
-        created_el.id = `weapon_${val}`
+        created_el.label = key
+        created_el.id = `weapon_${key}`
         _el_ar.appendChild(created_el)
-
     })
-    // let ad = Object.entries(weapon_order).find(([key, val]) => {
-    //     val.forEach(ek=>{
-    //         e
-    //     })
-    // })
 
     let f = performance.now()
 
-    let i = 0
     weapon_data.forEach(data => {
         let weapon_option = document.createElement("option")
 
-        // console.log(Object.values(weapon_order))
 
         Object.entries(weapon_order).forEach(([key, val]) => {
-            // console.log("dd")
-            // let flag = false
-            // if (abi_exsept.includes(data.ability)) {
-
-            //     flag = true
-            // } else if (weapon_exsept.includes(data.name)) {
-
-            //     flag = true
-            // } else {
 
             val.forEach(ff => {
 
@@ -106,21 +87,7 @@ function set_weapon(target_id) {
                 }
             })
 
-
-
-            // if (flag) {
-
-            //     // console.log(key)
-            //     // i++
-            //     // console.log(i)
-            //     weapon_option.value = data["name"]
-            //     weapon_option.textContent = `${data["ability"]} : ${data["name"]}`
-            //     let a = document.getElementById(`weapon_${key}`)
-            //     a.appendChild(weapon_option)
-            // }
         })
-
-
 
     })
 
