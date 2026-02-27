@@ -12,7 +12,18 @@ function d() {
     f.lu = localStorage.getItem("lu")
     console.log(f)
 }
+// let a = document.cookie
+// let b = a.split(";")
+// console.log(b.filter(el => el.split("=")[0].trim() == "key"))
+// // document.cookie = "key=value;max-age=" + 60 * 60 * 24 + "; path=/"
 
+
+const reqe = indexedDB.open("mydata", 1)
+reqe.onerror = (event) => console.error("DB_error", event)
+reqe.onsuccess = (event) => {
+    const dv = event.target.result
+    console.log("sucee")
+}
 // d()
 //ステータスの計算
 function calc() {
