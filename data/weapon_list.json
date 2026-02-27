@@ -48,6 +48,12 @@
         "ability": "和属"
     },
     {
+        "name": "天巴之御佩刀",
+        "grade": 9,
+        "base_ATK": 310,
+        "ability": "不乱"
+    },
+    {
         "name": "仁双応",
         "grade": 9,
         "base_ATK": 220,
@@ -112,12 +118,6 @@
         "grade": 9,
         "base_ATK": 180,
         "ability": "和属"
-    },
-    {
-        "name": "天巴之御佩刀",
-        "grade": 9,
-        "base_ATK": 310,
-        "ability": "不乱"
     },
     {
         "name": "弓生矢",
