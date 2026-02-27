@@ -27,9 +27,9 @@ function ff() {
     }
     // console.log(target_level)
     if (next_exp > (now_level * (trans_num + 11) - 3)) {
-        res.textContent = "next 経験値 が大きすぎるかも?"
+        res_1_1.textContent = "next 経験値 が大きすぎるかも?"
     } else if (now_level >= target_level) {
-        res.textContent = "現在レベル が 目標レベル 以上です"
+        res_1_1.textContent = "現在レベル が 目標レベル 以上です"
     } else if (0 < now_level && now_level < max_level && 0 < target_level && target_level <= max_level && 0 <= next_exp) {
         res_1_1.textContent = `Lv ${now_level} ~ ${target_level} まで :`
         res_1_2.textContent = ` ${calc_level(now_level, target_level, next_exp, trans_num)} exp`
@@ -40,14 +40,14 @@ function ff() {
 
 
     } else if (isNaN(now_level)) {
-        res.textContent = "現在レベル を設定してください"
+        res_1_1.textContent = "現在レベル を設定してください"
     } else if (isNaN(target_level)) {
-        res.textContent = "目標レベル を設定してください"
+        res_1_1.textContent = "目標レベル を設定してください"
     } else if (next_exp < 0) {
-        res.textContent = "next exp が負の値です"
+        res_1_1.textContent = "next exp が負の値です"
     }
     else {
-        res.textContent = `${trans_num} 転目のレベルの範囲は 1 ~ ${max_level} です`
+        res_1_1.textContent = `${trans_num} 転目のレベルの範囲は 1 ~ ${max_level} です`
     }
 }
 
