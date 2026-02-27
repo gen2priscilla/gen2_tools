@@ -158,19 +158,19 @@
                     <th></th>
                     <td>
                         <label class="RGH">
-                            <input type="radio" name="ra" id="ra_1">
+                            <input type="radio" name="ra" id="ra_1" value="1" checked>
                             通常
                         </label>
                     </td>
                     <td>
                         <label class="RGH">
-                            <input type="radio" name="ra" id="ra_2">
+                            <input type="radio" name="ra" id="ra_2" value="2">
                             2倍
                         </label>
                     </td>
                     <td>
                         <label class="RGH">
-                            <input type="radio" name="ra" id="ra_3">
+                            <input type="radio" name="ra" id="ra_3" value="3">
                             3倍
                         </label>
                     </td>
@@ -210,23 +210,23 @@
                     <th>アビ 2</th>
                     <td colspan="3" class="abi_exp">
                         <label>
-                            <input class="radio_2" type="radio" name="abi_2">
+                            <input class="radio_2" type="radio" name="abi_2" value="0" checked>
                             なし<div class="kakko">( +0% )</div>
                         </label>
                         <label>
-                            <input class="radio_2" type="radio" name="abi_2">
+                            <input class="radio_2" type="radio" name="abi_2" value="10">
                             習熟<div class="kakko">( +10% )</div>
                         </label>
                         <label>
-                            <input class="radio_2" type="radio" name="abi_2">
+                            <input class="radio_2" type="radio" name="abi_2" value="20">
                             博識<div class="kakko">( +20% )</div>
                         </label>
                         <label>
-                            <input class="radio_2" type="radio" name="abi_2">
+                            <input class="radio_2" type="radio" name="abi_2" value="30">
                             早熟<div class="kakko">( +30% )</div>
                         </label>
                         <label>
-                            <input class="radio_2" type="radio" name="abi_2">
+                            <input class="radio_2" type="radio" name="abi_2" value="50">
                             共栄<div class="kakko">( +50% )</div>
                         </label>
 
@@ -234,9 +234,9 @@
                 </tr>
             </table>
             <div class="calc_div">
-                <button class="calc">計算する !</button>
+                <button class="calc" onclick="calc_2_exp()">計算する !</button>
             </div>
-            <div id="exp_res"></div>
+            <div id="exp_res" style="text-align: center;"></div>
             <div class="border"></div>
         </div>
     </div>
@@ -303,11 +303,24 @@
         label {
             display: inline-block;
             background-color: lightgray;
+            border-radius: 2px;
+            box-shadow: 0px 1px darkgrey;
         }
 
         label:has(input[type=radio]:checked) {
-            background-color: darkgray;
+            background-color: silver;
+            transform: translateY(1px);
+            box-shadow: none;
         }
+
+        label:has(.kakko) {
+            width: 40px;
+            margin-top: 3px;
+            margin-bottom: 3px;
+            margin-left: 1px;
+            margin-right: 1px;
+        }
+
 
         #exp_cal {
             box-sizing: border-box;
