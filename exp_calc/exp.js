@@ -182,11 +182,19 @@ function calc_2_exp() {
     let f = document.getElementById("exp_cal")
     let rr = document.getElementById("exp_res")
 
+    let abi_1_ex = document.getElementsByName("abi_1")
+    let abi_1_ex_val = 0
+    abi_1_ex.forEach(el => {
+        if (el.checked) {
+            abi_1_ex_val = parseInt(el.value)
+        }
+    })
+
     let abi_2_ex = document.getElementsByName("abi_2")
     let abi_2_ex_val = 0
     abi_2_ex.forEach(el => {
         if (el.checked) {
-            abi_2_ex_val = parseInt(el.value) + 100
+            abi_2_ex_val = parseInt(el.value)
         }
     })
 
@@ -200,7 +208,7 @@ function calc_2_exp() {
     })
 
     if (f.value != "") {
-        let buf = (parseInt(f.value) * mode_val * (abi_2_ex_val)) / 100
+        let buf = (parseInt(f.value) * mode_val * (abi_1_ex_val + abi_2_ex_val + 100)) / 100
         rr.textContent = `${buf} Exp`
     } else {
         rr.textContent = "Exp を 入力してください"
