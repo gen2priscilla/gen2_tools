@@ -24,7 +24,7 @@
 
     <h2>経験値シミュレータ</h2>
 
-    <div id="atens">
+    <div class="atens">
         <ul>
             <li>
                 <div>※ シミュレーション結果には多少の誤差が生じる場合があります。<br> ご了承ください。</div>
@@ -150,10 +150,16 @@
             <div class="border"></div>
         </div>
 
-
+        <div class="atens">
+            <ul>
+                <li>
+                    <div>※ 小数点以下は切り上げています ( 2026/2/27 実機で確認 )</div>
+                </li>
+            </ul>
+        </div>
         <div class="arti">
             <h3>計算機</h3>
-            <table border="" id="keis">
+            <table border="" id="keis" style="width: 100%;">
                 <tr>
                     <th></th>
                     <td>
@@ -184,26 +190,26 @@
                 <tr>
                     <th>アビ 1</th>
                     <td colspan="3" class="abi_exp">
-                        <button>
-                            なし<br>
-                            <span>( +0% )</span>
-                        </button>
-                        <button>
-                            習熟<br>
-                            <span>( +10% )</span>
-                        </button>
-                        <button>
-                            博識<br>
-                            <span>( +20% )</span>
-                        </button>
-                        <button>
-                            早熟<br>
-                            <span>( +30% )</span>
-                        </button>
-                        <button>
-                            共栄<br>
-                            <span>( +50% )</span>
-                        </button>
+                        <label>
+                            <input class="radio_2" type="radio" name="abi_1" value="0" checked>
+                            なし<div class="kakko">( +0% )</div>
+                        </label>
+                        <label>
+                            <input class="radio_2" type="radio" name="abi_1" value="10">
+                            習熟<div class="kakko">( +10% )</div>
+                        </label>
+                        <label>
+                            <input class="radio_2" type="radio" name="abi_1" value="20">
+                            博識<div class="kakko">( +20% )</div>
+                        </label>
+                        <label>
+                            <input class="radio_2" type="radio" name="abi_1" value="30">
+                            早熟<div class="kakko">( +30% )</div>
+                        </label>
+                        <label>
+                            <input class="radio_2" type="radio" name="abi_1" value="50">
+                            共栄<div class="kakko">( +50% )</div>
+                        </label>
                     </td>
                 </tr>
                 <tr>
@@ -239,6 +245,51 @@
             <div id="exp_res" style="text-align: center;"></div>
             <div class="border"></div>
         </div>
+        <div class="arti">
+            <table border="" id="hayami">
+                <tr>
+                    <th>参加人数</th>
+                    <td>+ 0 </td>
+                    <td>+ 10 </td>
+                    <td>+ 15 </td>
+                    <td>+ 20 </td>
+
+                </tr>
+                <tr>
+                    <th>1</th>
+                    <td>+ 0 %</td>
+                    <td>+ 0 %</td>
+                    <td>+ 0 %</td>
+                    <td>+ 0 %</td>
+
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <td>+ 0 %</td>
+                    <td>+ 10 %</td>
+                    <td>+ 15 %</td>
+                    <td>+ 20 %</td>
+
+                </tr>
+                <tr>
+                    <th>3</th>
+                    <td>+ 0 %</td>
+                    <td>+ 20 %</td>
+                    <td>+ 30 %</td>
+                    <td>+ 40 %</td>
+
+                </tr>
+                <tr>
+                    <th>4</th>
+                    <td>+ 0 %</td>
+                    <td>+ 25 %</td>
+                    <td>+ 37 %</td>
+                    <td>+ 50 %</td>
+
+                </tr>
+            </table>
+            <div class="border"></div>
+        </div>
     </div>
 
 
@@ -247,6 +298,25 @@
     <script src="exp.js"></script>
     <script src="/gen2_tools/master.js"></script>
     <style>
+        body {
+            background-color: aliceblue;
+        }
+
+        #hayami {
+            margin: auto;
+            width: 100%;
+            text-align: center;
+        }
+
+        #hayami th {
+            width: 90px;
+        }
+
+        #hayami td {
+            width: 80px;
+        }
+
+
         .RGH {
             display: block;
             width: 90%;
@@ -389,15 +459,7 @@
 
 
 
-        #atens ul {
-            margin: auto;
-            list-style: none;
-            padding-left: 1em;
-            /* text-align: center; */
-            color: grey;
-            font-size: x-small;
-            text-indent: -1em;
-        }
+
 
         input[type="number"] {
             vertical-align: middle;
@@ -429,10 +491,20 @@
 
 
 
-        #atens {
+        .atens {
             margin: auto;
             max-width: 400px;
             width: 95%;
+        }
+
+        .atens ul {
+            margin: auto;
+            list-style: none;
+            padding-left: 1em;
+            /* text-align: center; */
+            color: grey;
+            font-size: x-small;
+            text-indent: -1em;
         }
 
         #arti {
