@@ -216,6 +216,7 @@
 
        ._next_ td {
            text-align: right;
+           padding-right: 5px;
        }
 
        .div_needExp {
