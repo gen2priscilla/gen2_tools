@@ -156,56 +156,79 @@ function set_weapon_abi(target_id) {
 
 
 
-//武器を target_id にセット
+//防具を target_id にセット
 function set_armor(target_id) {
     let armor_order = {
-        "強化": ["勇将", "猛皇", "猛将", "賢皇", "賢将"],
-        "S変換": ["誘惑"],
-        "A変換": ["威風", "戦略", "慈恵", "遊戯"],
-        "D変換": ["砕身", "悪戯", "改命", "瞑想"],
+        // "強化": [],
+        "S": ["勇将", "雲竜", "誘惑"],
+        "A": ["猛皇", "猛将", "威風", "戦略", "慈恵", "遊戯"],
+        "D": ["賢皇", "賢将", "砕身", "悪戯", "改命", "瞑想"],
         "L": ["博打", "才華", "浪漫"],
         "SAD増加": ["大帝", "修羅", "一八", "覇王", "天佑", "加護"],
-        "強化 2": ["雲竜", "生存", "虎砲", "闘争", "護鶴", "防衛"],
+        "tier 2": ["生存", "虎砲", "闘争", "護鶴", "防衛"],
         "属性": ["獣属", "魔属", "霊属", "龍属", "地属", "無属"],
         "その他": ["成長", "持久", "底力", "強固", "頑固", "鉄壁", "激運", "天運", "なし"]
     }
+
+    let weapon_exsept = ["エントレンジ", "妖狐ノ尾", "常夏ビキニ", "神楽鈴"]
+    let abi_exsept = ["雲竜", ""]
+
     let _el_ar = document.getElementById(target_id)
 
-    Object.entries(armor_order).forEach(([key, val]) => {
-
+    Object.keys(armor_order).forEach(key => {
         let created_el = document.createElement("optgroup")
         created_el.label = key
         created_el.id = `armor_${key}`
-
         _el_ar.appendChild(created_el)
+    })
 
-        let a = document.getElementById(created_el.id)
+    let f = performance.now()
+    // console.log(weapon_data)
 
+
+    Object.entries(armor_order).forEach(([key, val]) => {
         val.forEach(element => {
-            armor_data.forEach(val => {
-                if (element == val["ability"]) {
-                    let armor_option = document.createElement("option")
-                    armor_option.value = val["name"]
-                    armor_option.textContent = `${val["ability"]} : ${val["name"]}`
+            // let d = performance.now()
 
+            armor_data.forEach(eleme => {
+                if (eleme.ability == element) {
+                    let lab = ""
+                    let armor_option = document.createElement("option")
+                    armor_option.value = eleme["name"]
+                    armor_option.textContent = `${eleme["ability"]} : ${eleme["name"]}`
+
+                    if (8 <= eleme.grade || key == "属性") {
+                        lab = key
+                    } else if (weapon_exsept.includes(eleme.name) || abi_exsept.includes(eleme.ability)) {
+                        // console.log(eleme.name)
+                        lab = "tier 2"
+                    } else {
+                        lab = "その他"
+                    }
+                    let a = document.getElementById(`armor_${lab}`)
                     a.appendChild(armor_option)
                 }
             })
+
+            // console.log(qw)
+            // let dd = performance.now()
+            // console.log(d + " : " + dd + " : " + (dd - d))
         })
     })
+
 }
 
 
 //武器アビリティを target_id にセット
 function set_armor_abi(target_id) {
     let ability_name = {
-        // "強化": ["勇将", "猛皇", "猛将", "賢皇", "賢将"],
-        "強化"/*強化 2*/: ["雲竜", "生存", "虎砲", "闘争", "護鶴", "防衛"],
-        "S変換": ["誘惑"],
-        "A変換": ["威風", "戦略", "慈恵", "遊戯"],
-        "D変換": ["砕身", "悪戯", "改命", "瞑想"],
+        // "強化": [],
+        "S": [/*"勇皇","勇将",*/ "雲竜", "生存", "誘惑"],
+        "A": [/*"猛皇","猛将",*/ "虎砲", "闘争", "威風", "戦略", "慈恵", "遊戯"],
+        "D": [/*"賢皇","賢将",*/ "護鶴", "防衛", "砕身", "悪戯", "改命", "瞑想"],
         "L": ["博打", "才華", "浪漫"],
         "SAD増加": ["大帝", "修羅", "一八", "覇王", "天佑", "加護"],
+        "tier 2": [],
         "属性": ["獣属", "魔属", "霊属", "龍属", "地属", "無属"],
         "その他": ["成長", "持久", "底力", "強固", "頑固", "鉄壁", "激運", "天運", "なし"]
     }
