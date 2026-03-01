@@ -180,6 +180,7 @@ function hum() {
 
 function calc_2_exp() {
     let f = document.getElementById("exp_cal")
+    let f_num = document.getElementById("exp_num")
     let rr = document.getElementById("exp_res")
 
     let abi_1_ex = document.getElementsByName("abi_1")
@@ -214,10 +215,14 @@ function calc_2_exp() {
         }
     })
 
-    if (f.value != "") {
-        let buf = (parseInt(f.value) * mode_val * boost_val * (abi_1_ex_val + abi_2_ex_val + 100)) / 100
-        rr.textContent = `${buf} Exp`
-    } else {
+    if (f.value == "") {
+
         rr.textContent = "Exp を 入力してください"
+    } else if (f_num.value == "") {
+        rr.textContent = "回数 を 入力してください"
+    } else {
+        let buf = (parseInt(f.value) * mode_val * boost_val * (abi_1_ex_val + abi_2_ex_val + 100)) / 100
+        buf = Math.ceil(buf) * parseInt(f_num.value)
+        rr.textContent = `${buf} Exp`
     }
 }
