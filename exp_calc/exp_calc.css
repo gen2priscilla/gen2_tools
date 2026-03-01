@@ -2,22 +2,20 @@
            background-color: aliceblue;
        }
 
-       #hayami {
-           margin: auto;
+       table {
            width: 100%;
+       }
+
+       th {
+           width: 15%;
+       }
+
+       #hayami {
            text-align: center;
        }
 
-       #hayami th {
-           width: 70px
-       }
-
-       #hayami td {
-           width: 70px;
-       }
-
-       #hayami span {
-           font-size: xx-small;
+       #hayami_head td {
+           font-weight: bold;
        }
 
        #keis label {
@@ -27,7 +25,16 @@
            border-radius: 2px;
            box-shadow: 0px 1px darkgrey;
            text-align: center;
+       }
 
+       input[type="radio"] {
+           display: none;
+       }
+
+       label:has(input[type=radio]:checked) {
+           background-color: silver !important;
+           transform: translateY(1px);
+           box-shadow: none;
        }
 
        /* #keis table {
@@ -71,15 +78,6 @@
            display: block !important;
        }
 
-       input[type="radio"] {
-           display: none;
-       }
-
-       label:has(input[type=radio]:checked) {
-           background-color: silver !important;
-           transform: translateY(1px);
-           box-shadow: none;
-       }
 
        label:has(.kakko) {
            font-size: small;
