@@ -1,0 +1,312 @@
+       body {
+           background-color: aliceblue;
+       }
+
+       #hayami {
+           margin: auto;
+           width: 100%;
+           text-align: center;
+       }
+
+       #hayami th {
+           width: 70px
+       }
+
+       #hayami td {
+           width: 70px;
+       }
+
+       #hayami span {
+           font-size: xx-small;
+       }
+
+
+       .RGH {
+           display: inline-block;
+           width: 32%;
+           margin: auto;
+           text-align: center;
+       }
+
+       .RGH_ {
+           display: inline-block;
+           width: 23.7%;
+           margin: auto;
+           text-align: center;
+       }
+
+       #keis table {
+           text-align: center;
+       }
+
+       #keis th {
+           width: 20px;
+           height: 30px;
+           text-align: center;
+           font-weight: normal;
+       }
+
+       #keis td {
+           /* text-align: center; */
+           width: 200px;
+           height: 30px;
+       }
+
+       #keis td:has(label) {
+           text-align: center;
+       }
+
+       #keis td:is(.abi_exp) {
+           /* font-size: 0px; */
+           text-align: center;
+       }
+
+       #keis label:has(.radio_2) {
+           padding-left: 4px;
+           padding-right: 4px;
+           padding-bottom: 1px;
+       }
+
+
+       #keis span {
+           font-size: x-small;
+       }
+
+       .abi_exp .kakko {
+           font-size: x-small;
+       }
+
+       input[type="radio"] {
+           display: none;
+       }
+
+       label {
+           display: inline-block;
+           background-color: lightgray;
+           border-radius: 2px;
+           box-shadow: 0px 1px darkgrey;
+       }
+
+       label:has(input[type=radio]:checked) {
+           background-color: silver;
+           transform: translateY(1px);
+           box-shadow: none;
+       }
+
+       label:has(.kakko) {
+           font-size: small;
+           width: 40px;
+           margin-top: 3px;
+           margin-bottom: 3px;
+           margin-left: 1px;
+           margin-right: 1px;
+       }
+
+
+       #exp_cal {
+           box-sizing: border-box;
+           height: 28px;
+           min-width: 100px;
+
+           margin-left: 10px;
+       }
+
+
+       #ee {
+           margin: auto;
+           width: 100%;
+       }
+
+       #ee tr {
+           height: 39px;
+           min-height: 39px;
+           max-height: 40px;
+       }
+
+       #ee th {
+           font-weight: normal;
+           text-align: center;
+           max-width: 80px;
+           width: 56px;
+       }
+
+       #ee .input_level {
+           text-align: center;
+           font-size: 0;
+       }
+
+       button:is(.add_level_now, .add_level_target) {
+
+           font-size: small;
+           vertical-align: middle;
+           height: 28px;
+           width: 12%;
+           padding: 4px 0px;
+           margin-left: 1px;
+           margin-right: 1px;
+           /* line-height: 20px; */
+           font-weight: normal;
+           border: 0px solid lightgray;
+           box-shadow: 0px 1px grey;
+           background-color: gainsboro;
+           border-radius: 2px;
+       }
+
+       button:is(.set_level, .set_now_level) {
+           font-size: small;
+           height: 80%;
+           width: 15%;
+           padding: 4px 1px;
+           margin-left: 1px;
+           margin-right: 1px;
+           /* line-height: 20px; */
+           font-weight: normal;
+           border: 1px solid lightgray;
+           box-shadow: 0px 1px grey;
+           background-color: gainsboro;
+           border-radius: 2px;
+       }
+
+
+
+
+
+       input[type="number"] {
+           vertical-align: middle;
+           display: inline-block;
+           width: 55px;
+           /* max-height: 30px; */
+           max-width: 50px;
+           font-size: 16px;
+       }
+
+       .input_level input[type="number"] {
+           vertical-align: middle;
+           box-sizing: border-box;
+           font-size: 17px;
+           height: 30px;
+           margin-left: 2px;
+           margin-right: 2px;
+           /* border: 1px; */
+           padding-left: 2px;
+           padding-right: 1px;
+       }
+
+       .border {
+           text-align: center;
+           margin-top: 20px;
+           margin-bottom: 40px;
+           border: 1px dashed grey;
+       }
+
+
+
+       .atens {
+           margin: auto;
+           max-width: 400px;
+           width: 95%;
+       }
+
+       .atens ul {
+           margin: auto;
+           list-style: none;
+           padding-left: 1em;
+           /* text-align: center; */
+           color: grey;
+           font-size: x-small;
+           text-indent: -1em;
+       }
+
+       #arti {
+           margin: auto;
+           max-width: 400px;
+           width: 95%;
+           background-color: aliceblue;
+       }
+
+       .arti {
+           margin: auto;
+           max-width: 400px;
+           width: 95%;
+           background-color: aliceblue;
+       }
+
+       .arti table {
+           margin: auto;
+       }
+
+       .div_needExp {
+           display: inline;
+           margin-left: 10px;
+           width: 80px;
+           height: 100%;
+       }
+
+       .div_needExp span {
+           vertical-align: middle;
+           margin-left: 5px;
+       }
+
+       #next_exp {
+           box-sizing: border-box;
+           max-width: 100px;
+           width: 80px;
+           height: 30px;
+       }
+
+       #trans_num {
+           padding: 2px;
+           font-size: 16px;
+           height: 30px;
+           width: 80px;
+           border-radius: 3px;
+       }
+
+       #calc_Lv {
+           text-align: center;
+       }
+
+       #calc_Lv button {
+           text-align: center;
+           font-size: medium;
+           padding: 1px 4px;
+           margin-top: 10px;
+           margin-bottom: 10px;
+           min-width: 100px;
+           min-height: 30px;
+
+
+           border: 1px solid lightgray;
+           box-shadow: 0px 1px grey;
+           background-color: gainsboro;
+           border-radius: 2px;
+       }
+
+       button:is(.calc) {
+           text-align: center;
+           font-size: medium;
+           padding: 1px 4px;
+           margin-top: 10px;
+           margin-bottom: 10px;
+           min-width: 100px;
+           min-height: 30px;
+
+
+           border: 1px solid lightgray;
+           box-shadow: 0px 1px grey;
+           background-color: gainsboro;
+           border-radius: 2px;
+       }
+
+       .calc_div {
+           text-align: center;
+       }
+
+       button:active:not(.hum) {
+           transform: translateY(1px);
+       }
+
+       button:hover:not(.hum) {
+           box-shadow: none !important;
+           transform: translateY(1px);
+       }
