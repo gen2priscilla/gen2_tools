@@ -2,11 +2,11 @@
            background-color: aliceblue;
        }
 
-       table {
+       table:not(._next_) {
            width: 100%;
        }
 
-       th {
+       table:not(._next_) th {
            width: 15%;
        }
 
@@ -25,16 +25,12 @@
 
        div:has(>.calc_but) {
            text-align: center;
-           height: 200px;
            align-items: center;
        }
-
-       /* td:has(>.asd) {} */
 
        div:is(.asd) {
            display: flex;
            height: 100%;
-           background-color: aquamarine !important;
        }
 
        /* td:has(button) {
@@ -46,6 +42,7 @@
            width: 100% !important;
            height: 30px;
            margin: 2px 2px;
+           font-size: medium !important;
        }
 
        #hayami {
@@ -127,8 +124,8 @@
        #exp_num {
            box-sizing: border-box;
            height: 28px;
-           min-width: 100px;
-
+           min-width: 50px;
+           width: 100px;
            margin-left: 10px;
        }
 
@@ -210,6 +207,15 @@
 
        .arti table {
            margin: auto;
+       }
+
+       ._next_ {
+           margin: auto;
+           text-align: right;
+       }
+
+       ._next_ td {
+           text-align: right;
        }
 
        .div_needExp {
