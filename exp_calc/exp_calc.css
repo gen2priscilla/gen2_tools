@@ -67,7 +67,6 @@
        div:is(.kakko) {
            font-size: x-small;
            display: block !important;
-           background-color: aquamarine;
        }
 
        input[type="radio"] {
@@ -75,7 +74,7 @@
        }
 
        label:has(input[type=radio]:checked) {
-           background-color: silver;
+           background-color: silver !important;
            transform: translateY(1px);
            box-shadow: none;
        }
@@ -90,7 +89,8 @@
        }
 
 
-       #exp_cal {
+       #exp_cal,
+       #exp_num {
            box-sizing: border-box;
            height: 28px;
            min-width: 100px;
