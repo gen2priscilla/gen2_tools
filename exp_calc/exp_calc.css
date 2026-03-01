@@ -67,6 +67,7 @@
        div:is(.kakko) {
            font-size: x-small;
            display: block !important;
+           background-color: aquamarine;
        }
 
        input[type="radio"] {
