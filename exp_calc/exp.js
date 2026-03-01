@@ -198,6 +198,13 @@ function calc_2_exp() {
         }
     })
 
+    let boost = document.getElementsByName("boost")
+    let boost_val = 1
+    boost.forEach(el => {
+        if (el.checked) {
+            boost_val = parseInt(el.value)
+        }
+    })
 
     let mode = document.getElementsByName("ra")
     let mode_val = 1
@@ -208,7 +215,7 @@ function calc_2_exp() {
     })
 
     if (f.value != "") {
-        let buf = (parseInt(f.value) * mode_val * (abi_1_ex_val + abi_2_ex_val + 100)) / 100
+        let buf = (parseInt(f.value) * mode_val * boost_val * (abi_1_ex_val + abi_2_ex_val + 100)) / 100
         rr.textContent = `${buf} Exp`
     } else {
         rr.textContent = "Exp を 入力してください"
