@@ -1,4 +1,8 @@
 function ff() {
+    let f = document.getElementsByClassName("res_LV")
+    Object.values(f).forEach(el => {
+        el.textContent = ""
+    })
 
     let res_1_1 = document.getElementById("res_1_1")
     let res_2_1 = document.getElementById("res_2_1")
@@ -35,9 +39,7 @@ function ff() {
         Object.values(f).forEach(el => {
             el.textContent = "Lv"
         })
-        // f.forEach(el => {
-        //     el.textContent = "Lv"
-        // })
+
         res_1_1.textContent = ` ${now_level} ~ ${target_level} : `
         res_1_2.textContent = ` ${calc_level(now_level, target_level, next_exp, trans_num)} exp`
         res_2_1.textContent = ` ${target_level} ~ ${target_level + 1} : `
