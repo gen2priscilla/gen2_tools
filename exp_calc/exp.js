@@ -89,8 +89,8 @@ function ff() {
     } else if (now_level >= target_level) {
         res_1_1.textContent = "現在レベル が 目標レベル 以上です"
     } else if (0 < now_level && now_level < max_level && 0 < target_level && target_level <= max_level && 0 <= next_exp) {
-        let get_exp_buf = Math.ceil(exp_ * mode_val * boost_val * (abi_1_ex_val + abi_2_ex_val + 100)) / 100
-
+        let get_exp_buf = Math.ceil(exp_ * mode_val * boost_val * (abi_1_ex_val + abi_2_ex_val + 100) / 100)
+        console.log(get_exp_buf)
         let f = document.getElementsByClassName("res_LV")
         Object.values(f).forEach(el => {
             el.textContent = "Lv"
