@@ -46,6 +46,24 @@ input {
     vertical-align: middle;
 }
 
+button:not(.hum) {
+    font-weight: normal;
+    border: 0px solid lightgray;
+    box-shadow: 0px 1px grey;
+    background-color: gainsboro;
+    border-radius: 2px;
+}
+
+
+button:active:not(.hum) {
+    transform: translateY(1px);
+}
+
+button:hover:not(.hum) {
+    box-shadow: none !important;
+    transform: translateY(1px);
+}
+
 .atens {
     margin: auto;
     max-width: 400px;
