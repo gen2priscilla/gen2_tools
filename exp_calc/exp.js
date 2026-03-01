@@ -17,28 +17,88 @@ function ff() {
     res_2_2.textContent = ""
     res_3_2.textContent = ""
 
+    let res_num = document.getElementById("res_num")
+    res_num.textContent = ""
+
     let now_level = parseInt(document.getElementById("now_level").value)
     let target_level = parseInt(document.getElementById("target_level").value)
     let next_exp = parseInt(document.getElementById("next_exp").value)
+    let exp_ = parseInt(document.getElementById("exp_").value)
     let trans_num = parseInt(document.getElementById("trans_num").value)
+
+    if (isNaN(now_level)) {
+        now_level = 0
+    }
+    if (isNaN(target_level)) {
+        target_level = 0
+    }
+    if (isNaN(next_exp)) {
+        next_exp = 0
+    }
+    if (isNaN(exp_)) {
+        exp_ = 0
+    }
 
     let max_level = 200
     if (trans_num == 8 || trans_num == 9) {
         max_level = 250
     }
-    if (isNaN(next_exp)) {
-        next_exp = 0
-    }
-    // console.log(target_level)
-    if (next_exp > (now_level * (trans_num + 11) - 3)) {
+
+    let abi_1_ex = document.getElementsByName("calc_abi_1")
+    let abi_1_ex_val = 0
+    abi_1_ex.forEach(el => {
+        if (el.checked) {
+            abi_1_ex_val = parseInt(el.value)
+        }
+    })
+
+    let abi_2_ex = document.getElementsByName("calc_abi_2")
+    let abi_2_ex_val = 0
+    abi_2_ex.forEach(el => {
+        if (el.checked) {
+            abi_2_ex_val = parseInt(el.value)
+        }
+    })
+
+    let boost = document.getElementsByName("calc_boost")
+    let boost_val = 1
+    boost.forEach(el => {
+        if (el.checked) {
+            boost_val = parseInt(el.value)
+        }
+    })
+
+    let mode = document.getElementsByName("calc_ra")
+    let mode_val = 1
+    mode.forEach(el => {
+        if (el.checked) {
+            mode_val = parseInt(el.value)
+        }
+    })
+
+    if (now_level <= 0) {
+        res_1_1.textContent = "現在レベル を正しく設定してください"
+    } else if (target_level <= 0) {
+        res_1_1.textContent = "目標レベル を正しく設定してください"
+    } else if (next_exp < 0) {
+        res_1_1.textContent = "next exp を正しく設定してください"
+    } else if (exp_ <= 0) {
+        res_1_1.textContent = "exp を正しく設定してください"
+    } else if (next_exp > (now_level * (trans_num + 11) - 3)) {
         res_1_1.textContent = "next 経験値 が大きすぎるかも?"
     } else if (now_level >= target_level) {
         res_1_1.textContent = "現在レベル が 目標レベル 以上です"
     } else if (0 < now_level && now_level < max_level && 0 < target_level && target_level <= max_level && 0 <= next_exp) {
+        let get_exp_buf = Math.ceil(exp_ * mode_val * boost_val * (abi_1_ex_val + abi_2_ex_val + 100)) / 100
+
         let f = document.getElementsByClassName("res_LV")
         Object.values(f).forEach(el => {
             el.textContent = "Lv"
         })
+        let ffff = calc_level(now_level, target_level, next_exp, trans_num)
+        let fffff = Math.ceil(ffff / get_exp_buf)
+        let ffffff = fffff * get_exp_buf - ffff
+        res_num.textContent = `${fffff} 回 ( ${fffff * get_exp_buf} exp ) 余り ${ffffff} exp`
 
         res_1_1.textContent = ` ${now_level} ~ ${target_level} : `
         res_1_2.textContent = ` ${calc_level(now_level, target_level, next_exp, trans_num)} exp`
@@ -46,14 +106,7 @@ function ff() {
         res_2_2.textContent = ` ${calc_level(target_level, target_level + 1, 0, trans_num)} exp`
         res_3_1.textContent = ` ${now_level} ~ ${target_level + 1} : `
         res_3_2.textContent = ` ${calc_level(now_level, target_level + 1, next_exp, trans_num)} exp`
-    } else if (isNaN(now_level)) {
-        res_1_1.textContent = "現在レベル を設定してください"
-    } else if (isNaN(target_level)) {
-        res_1_1.textContent = "目標レベル を設定してください"
-    } else if (next_exp < 0) {
-        res_1_1.textContent = "next exp が負の値です"
-    }
-    else {
+    } else {
         res_1_1.textContent = `${trans_num} 転目のレベルの範囲は 1 ~ ${max_level} です`
     }
 }
