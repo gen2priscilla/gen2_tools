@@ -31,14 +31,19 @@ function ff() {
     } else if (now_level >= target_level) {
         res_1_1.textContent = "現在レベル が 目標レベル 以上です"
     } else if (0 < now_level && now_level < max_level && 0 < target_level && target_level <= max_level && 0 <= next_exp) {
-        res_1_1.textContent = `Lv ${now_level} ~ ${target_level} まで :`
+        let f = document.getElementsByClassName("res_LV")
+        Object.values(f).forEach(el => {
+            el.textContent = "Lv"
+        })
+        // f.forEach(el => {
+        //     el.textContent = "Lv"
+        // })
+        res_1_1.textContent = ` ${now_level} ~ ${target_level} : `
         res_1_2.textContent = ` ${calc_level(now_level, target_level, next_exp, trans_num)} exp`
-        res_2_1.textContent = `Lv ${target_level} ~ ${target_level + 1} まで :`
+        res_2_1.textContent = ` ${target_level} ~ ${target_level + 1} : `
         res_2_2.textContent = ` ${calc_level(target_level, target_level + 1, 0, trans_num)} exp`
-        res_3_1.textContent = `Lv ${now_level} ~ ${target_level + 1} まで :`
+        res_3_1.textContent = ` ${now_level} ~ ${target_level + 1} : `
         res_3_2.textContent = ` ${calc_level(now_level, target_level + 1, next_exp, trans_num)} exp`
-
-
     } else if (isNaN(now_level)) {
         res_1_1.textContent = "現在レベル を設定してください"
     } else if (isNaN(target_level)) {
