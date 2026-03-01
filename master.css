@@ -6,6 +6,10 @@ body {
     margin: 0px;
 }
 
+table {
+    border-collapse: collapse;
+}
+
 h1 {
     height: 40px;
     line-height: 40px;
