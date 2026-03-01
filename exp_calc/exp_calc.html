@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>経験値シミュレータ | シミュレータ</title>
     <link rel="stylesheet" href="/gen2_tools/master.css">
+    <link rel="stylesheet" href="exp_calc.css">
 </head>
 
 <body>
@@ -161,35 +162,56 @@
             <h3>計算機</h3>
             <table border="" id="keis" style="width: 100%;">
                 <tr>
-                    <th></th>
+                    <th>Boost</th>
                     <td>
                         <label class="RGH">
-                            <input type="radio" name="ra" id="ra_1" value="1" checked>
+                            <input type="radio" name="boost" id="ra_1" value="1" checked>
                             通常
                         </label>
-                    </td>
-                    <td>
                         <label class="RGH">
-                            <input type="radio" name="ra" id="ra_2" value="2">
+                            <input type="radio" name="boost" id="ra_2" value="2">
                             2倍
                         </label>
-                    </td>
-                    <td>
+
                         <label class="RGH">
-                            <input type="radio" name="ra" id="ra_3" value="3">
+                            <input type="radio" name="boost" id="ra_3" value="3">
                             3倍
                         </label>
                     </td>
                 </tr>
                 <tr>
+                    <th>Item</th>
+                    <td>
+                        <label class="RGH_">
+                            <input type="radio" name="ra" id="ra_1" value="1" checked>
+                            通常
+                        </label>
+
+                        <label class="RGH_">
+                            <input type="radio" name="ra" id="ra_2" value="2">
+                            2倍
+                        </label>
+
+                        <label class="RGH_">
+                            <input type="radio" name="ra" id="ra_3" value="3">
+                            3倍
+                        </label>
+
+                        <label class="RGH_">
+                            <input type="radio" name="ra" id="ra_3" value="7">
+                            7倍
+                        </label>
+                    </td>
+                </tr>
+                <tr>
                     <th>Exp</th>
-                    <td colspan="3">
+                    <td>
                         <input id="exp_cal" type="number" inputmode="numeric">
                     </td>
                 </tr>
                 <tr>
                     <th>アビ 1</th>
-                    <td colspan="3" class="abi_exp">
+                    <td class="abi_exp">
                         <label>
                             <input class="radio_2" type="radio" name="abi_1" value="0" checked>
                             なし<div class="kakko">( +0% )</div>
@@ -214,7 +236,7 @@
                 </tr>
                 <tr>
                     <th>アビ 2</th>
-                    <td colspan="3" class="abi_exp">
+                    <td class="abi_exp">
                         <label>
                             <input class="radio_2" type="radio" name="abi_2" value="0" checked>
                             なし<div class="kakko">( +0% )</div>
@@ -248,44 +270,39 @@
         <div class="arti">
             <table border="" id="hayami">
                 <tr>
-                    <th>参加人数</th>
-                    <td>+ 0 </td>
-                    <td>+ 10 </td>
-                    <td>+ 15 </td>
-                    <td>+ 20 </td>
-
-                </tr>
-                <tr>
+                    <td></td>
                     <th>1</th>
-                    <td>+ 0 %</td>
-                    <td>+ 0 %</td>
-                    <td>+ 0 %</td>
-                    <td>+ 0 %</td>
-
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
                 </tr>
                 <tr>
-                    <th>2</th>
+                    <td>+ 20 </td>
+                    <td>+ 0 %</td>
+                    <td>+ 20 %</td>
+                    <td>+ 40 %</td>
+                    <td>+ 50 %</td>
+                </tr>
+                <tr>
+                    <td>+ 15 </td>
+                    <td>+ 0 %</td>
+                    <td>+ 15 %</td>
+                    <td>+ 30 %</td>
+                    <td>+ 37 %</td>
+                </tr>
+                <tr>
+                    <td>+ 10 </td>
                     <td>+ 0 %</td>
                     <td>+ 10 %</td>
-                    <td>+ 15 %</td>
                     <td>+ 20 %</td>
-
-                </tr>
-                <tr>
-                    <th>3</th>
-                    <td>+ 0 %</td>
-                    <td>+ 20 %</td>
-                    <td>+ 30 %</td>
-                    <td>+ 40 %</td>
-
-                </tr>
-                <tr>
-                    <th>4</th>
-                    <td>+ 0 %</td>
                     <td>+ 25 %</td>
-                    <td>+ 37 %</td>
-                    <td>+ 50 %</td>
-
+                </tr>
+                <tr>
+                    <td>+ 0 </td>
+                    <td>+ 0 %</td>
+                    <td>+ 0 %</td>
+                    <td>+ 0 %</td>
+                    <td>+ 0 %</td>
                 </tr>
             </table>
             <div class="border"></div>
@@ -297,310 +314,7 @@
 
     <script src="exp.js"></script>
     <script src="/gen2_tools/master.js"></script>
-    <style>
-        body {
-            background-color: aliceblue;
-        }
 
-        #hayami {
-            margin: auto;
-            width: 100%;
-            text-align: center;
-        }
-
-        #hayami th {
-            width: 90px;
-        }
-
-        #hayami td {
-            width: 80px;
-        }
-
-
-        .RGH {
-            display: block;
-            width: 90%;
-            margin: auto;
-            text-align: center;
-        }
-
-        #keis th {
-            width: 60px;
-            height: 30px;
-            text-align: center;
-            font-weight: normal;
-        }
-
-        #keis td {
-            width: 100px;
-            height: 30px;
-        }
-
-        #keis td:is(.abi_exp) {
-            /* font-size: 0px; */
-            text-align: center;
-        }
-
-
-
-        #keis button {
-            width: 19%;
-            margin: auto 1px;
-            padding: 1px 1px;
-            font-size: small;
-            vertical-align: middle;
-
-            font-weight: normal;
-            border: 1px solid lightgray;
-            box-shadow: 0px 1px grey;
-            background-color: gainsboro;
-            border-radius: 2px;
-        }
-
-
-        #keis span {
-            font-size: x-small;
-        }
-
-        .abi_exp .kakko {
-            font-size: x-small;
-        }
-
-        input[type="radio"] {
-            display: none;
-        }
-
-        label {
-            display: inline-block;
-            background-color: lightgray;
-            border-radius: 2px;
-            box-shadow: 0px 1px darkgrey;
-        }
-
-        label:has(input[type=radio]:checked) {
-            background-color: silver;
-            transform: translateY(1px);
-            box-shadow: none;
-        }
-
-        label:has(.kakko) {
-            font-size: small;
-            width: 40px;
-            margin-top: 3px;
-            margin-bottom: 3px;
-            margin-left: 1px;
-            margin-right: 1px;
-        }
-
-
-        #exp_cal {
-            box-sizing: border-box;
-            height: 28px;
-            min-width: 100px;
-
-            margin-left: 10px;
-        }
-
-
-        #ee {
-            margin: auto;
-            width: 100%;
-        }
-
-        #ee tr {
-            height: 39px;
-            min-height: 39px;
-            max-height: 40px;
-        }
-
-        #ee th {
-            font-weight: normal;
-            text-align: center;
-            max-width: 80px;
-            width: 56px;
-        }
-
-        #ee .input_level {
-            text-align: center;
-            font-size: 0;
-        }
-
-        button:is(.add_level_now, .add_level_target) {
-
-            font-size: small;
-            vertical-align: middle;
-            height: 28px;
-            width: 12%;
-            padding: 4px 0px;
-            margin-left: 1px;
-            margin-right: 1px;
-            /* line-height: 20px; */
-            font-weight: normal;
-            border: 0px solid lightgray;
-            box-shadow: 0px 1px grey;
-            background-color: gainsboro;
-            border-radius: 2px;
-        }
-
-        button:is(.set_level, .set_now_level) {
-            font-size: small;
-            height: 80%;
-            width: 15%;
-            padding: 4px 1px;
-            margin-left: 1px;
-            margin-right: 1px;
-            /* line-height: 20px; */
-            font-weight: normal;
-            border: 1px solid lightgray;
-            box-shadow: 0px 1px grey;
-            background-color: gainsboro;
-            border-radius: 2px;
-        }
-
-
-
-
-
-        input[type="number"] {
-            vertical-align: middle;
-            display: inline-block;
-            width: 55px;
-            /* max-height: 30px; */
-            max-width: 50px;
-            font-size: 16px;
-        }
-
-        .input_level input[type="number"] {
-            vertical-align: middle;
-            box-sizing: border-box;
-            font-size: 17px;
-            height: 30px;
-            margin-left: 2px;
-            margin-right: 2px;
-            /* border: 1px; */
-            padding-left: 2px;
-            padding-right: 1px;
-        }
-
-        .border {
-            text-align: center;
-            margin-top: 20px;
-            margin-bottom: 40px;
-            border: 1px dashed grey;
-        }
-
-
-
-        .atens {
-            margin: auto;
-            max-width: 400px;
-            width: 95%;
-        }
-
-        .atens ul {
-            margin: auto;
-            list-style: none;
-            padding-left: 1em;
-            /* text-align: center; */
-            color: grey;
-            font-size: x-small;
-            text-indent: -1em;
-        }
-
-        #arti {
-            margin: auto;
-            max-width: 400px;
-            width: 95%;
-            background-color: aliceblue;
-        }
-
-        .arti {
-            margin: auto;
-            max-width: 400px;
-            width: 95%;
-            background-color: aliceblue;
-        }
-
-        .arti table {
-            margin: auto;
-        }
-
-        .div_needExp {
-            display: inline;
-            margin-left: 10px;
-            width: 80px;
-            height: 100%;
-        }
-
-        .div_needExp span {
-            vertical-align: middle;
-            margin-left: 5px;
-        }
-
-        #next_exp {
-            box-sizing: border-box;
-            max-width: 100px;
-            width: 80px;
-            height: 30px;
-        }
-
-        #trans_num {
-            padding: 2px;
-            font-size: 16px;
-            height: 30px;
-            width: 80px;
-            border-radius: 3px;
-        }
-
-        #calc_Lv {
-            text-align: center;
-        }
-
-        #calc_Lv button {
-            text-align: center;
-            font-size: medium;
-            padding: 1px 4px;
-            margin-top: 10px;
-            margin-bottom: 10px;
-            min-width: 100px;
-            min-height: 30px;
-
-
-            border: 1px solid lightgray;
-            box-shadow: 0px 1px grey;
-            background-color: gainsboro;
-            border-radius: 2px;
-        }
-
-        button:is(.calc) {
-            text-align: center;
-            font-size: medium;
-            padding: 1px 4px;
-            margin-top: 10px;
-            margin-bottom: 10px;
-            min-width: 100px;
-            min-height: 30px;
-
-
-            border: 1px solid lightgray;
-            box-shadow: 0px 1px grey;
-            background-color: gainsboro;
-            border-radius: 2px;
-        }
-
-        .calc_div {
-            text-align: center;
-        }
-
-        button:active:not(.hum) {
-            transform: translateY(1px);
-        }
-
-        button:hover:not(.hum) {
-            box-shadow: none !important;
-            transform: translateY(1px);
-        }
-    </style>
 </body>
 
 </html>
